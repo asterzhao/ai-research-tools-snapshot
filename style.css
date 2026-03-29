@@ -469,9 +469,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8fafc;color:#1e293b;l
 .roles-section:first-of-type{padding-top:0;}
 .roles-section:last-of-type{border-bottom:none;padding-bottom:8px;}
 .roles-section-head{width:100%;margin-bottom:18px;}
-.roles-section-inner{display:grid;grid-template-columns:minmax(0,0.36fr) minmax(0,1fr);gap:22px 28px;align-items:start;}
+.roles-section-inner{display:grid;grid-template-columns:minmax(0,0.45fr) minmax(0,0.55fr);gap:22px 28px;align-items:start;}
 @media (min-width:1100px){
-  .roles-section-inner{grid-template-columns:minmax(280px,0.34fr) minmax(0,1fr);gap:24px 32px;}
+  .roles-section-inner{grid-template-columns:minmax(280px,0.45fr) minmax(0,0.55fr);gap:24px 32px;}
 }
 @media (max-width:900px){
   .roles-section-inner{grid-template-columns:1fr;gap:18px;}

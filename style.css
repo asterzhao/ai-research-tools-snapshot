@@ -210,7 +210,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8fafc;color:#1e293b;l
 .bullet-list li{font-size:.82rem;color:#374151;line-height:1.55;padding:2px 0 2px 13px;position:relative;}
 .bullet-list li::before{content:'•';position:absolute;left:0;color:#94a3b8;}
 .privacy-text{font-size:.76rem;font-weight:400;color:#374151;line-height:1.45;}
-.privacy-text.p-green,.privacy-text.p-red,.privacy-text.p-redgreen,.privacy-text.p-grey{color:#374151;}
+.privacy-empty{color:#94a3b8;}
 .policy-link{font-size:.69rem;color:#3B82F6;text-decoration:none;display:inline-block;margin-top:3px;transition:.1s;}
 .policy-link:hover{text-decoration:underline;color:#1d4ed8;}
 .policy-na{font-size:.69rem;color:#cbd5e1;}

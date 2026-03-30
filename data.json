@@ -119,7 +119,7 @@
     {
       "id": "role4b",
       "short": "Role 4b",
-      "title": "Multi-Document Synthesis",
+      "title": "Multi-Document Synthesis (database-level RAG)",
       "description": "Using Retrieval-Augmented Generation (RAG), the AI (an LLM) reads across the top retrieved papers (chunks of texts) and writes a new, synthesized paragraph answering your specific question. The generated answer is grounded in retrieved texts, providing inline citations to show exactly where the information came from."
     },
     {
@@ -328,7 +328,7 @@
       "screenshots": [],
       "ai_role": "Traditional keyword/Boolean retrieval; no generative AI synthesis.",
       "ai_roles": [],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://policies.google.com/privacy",
       "needs": [
         "find-lit"
@@ -357,7 +357,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.elsevier.com/legal/privacy-policy",
       "needs": [
         "find-lit"
@@ -387,7 +387,7 @@
         "role0",
         "role1"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://clarivate.com/privacy-center/",
       "needs": [
         "find-lit"
@@ -417,7 +417,7 @@
         "role0",
         "role1"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.ebsco.com/company/privacy-policy",
       "needs": [
         "find-lit"
@@ -446,7 +446,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.ieee.org/security-privacy.html",
       "needs": [
         "find-lit",
@@ -476,7 +476,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://about.jstor.org/privacy/",
       "needs": [
         "find-lit"
@@ -505,7 +505,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.dowjones.com/privacy-notice/",
       "needs": [
         "news-biz"
@@ -534,7 +534,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "",
       "needs": [
         "find-lit"
@@ -563,7 +563,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://www.patsnap.com/privacy",
       "needs": [
         "find-lit"
@@ -593,7 +593,7 @@
         "role0",
         "role3"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.nlm.nih.gov/web_policies.html",
       "needs": [
         "find-lit",
@@ -624,7 +624,7 @@
         "role0",
         "role4a"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://allenai.org/privacy-policy",
       "needs": [
         "find-lit"
@@ -653,7 +653,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://openalex.org/privacy-policy",
       "needs": [
         "find-lit"
@@ -682,7 +682,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://about.lens.org/privacy/",
       "needs": [
         "find-lit"
@@ -711,7 +711,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://support.google.com/gemini/answer/13594961",
       "needs": [
         "ai-synthesis"
@@ -740,7 +740,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://openai.com/policies/privacy-policy/",
       "needs": [
         "ai-synthesis"
@@ -769,7 +769,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.anthropic.com/privacy",
       "needs": [
         "ai-synthesis"
@@ -798,7 +798,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "red",
+      "privacy": "Trains on user data",
       "policy_url": "https://x.ai/privacy-policy",
       "needs": [
         "ai-synthesis"
@@ -827,7 +827,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://itsc.hkust.edu.hk/services/it-infrastructure/privacy-policy-statement",
       "needs": [
         "ai-synthesis"
@@ -856,7 +856,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy",
       "needs": [
         "ai-synthesis"
@@ -885,7 +885,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "red",
+      "privacy": "Trains on user data",
       "policy_url": "https://poe.com/privacy",
       "needs": [
         "ai-synthesis"
@@ -915,7 +915,7 @@
         "role2",
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://www.perplexity.ai/privacy",
       "needs": [
         "ai-synthesis"
@@ -945,7 +945,7 @@
         "role2",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
       "needs": [
         "ai-synthesis"
@@ -965,19 +965,24 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered research platform that answers questions with citation-grounded responses from scholarly literature and classifies citations as supporting, contrasting, or mentioning.",
-      "unique": "Citation statements - ground AI responses in article full text for easy verification\nSmart Citations - classify citations as supporting, contrasting, or mentioning, with full in-text snippets rather than simple counts\nCustom setting - let users choose models, set the number of publications reviewed, and filter by year, publication type, journal, and more\nSearch transparency - show the full search strategy and all consulted sources\nOutput formats - support both chat and table/literature matrix views\nMCP server (launched in Feb 2026) - enable direct integration with Claude, ChatGPT, Copilot, and other MCP-compatible AI tool",
+      "unique": "**Citation statements** - ground AI responses in article full text for easy verification\n**Smart Citations** - classify citations as supporting, contrasting, or mentioning, with full in-text snippets rather than simple counts\n**Pre-filtering** - choose models, set the number of publications reviewed, filter by year, publication type, journal, etc.\n**Search transparency** - show the full search strategy and all consulted sources\n**Output formats** - support both chat and table/literature matrix views\n**MCP server** (Feb 2026) - enable direct integration with Claude, ChatGPT, Copilot, and other MCP-compatible AI tool",
       "similar": "Consensus (literature search + summary)\nElicit (literature search + summary)\nSciSpace (literature search + summary)",
-      "coverage": "Covers 280 million+ papers, books, preprints, etc. across all disciplines and includes 1 billion+ Smart Citation statements extracted from full-text articles. Its content comes from both direct publisher indexing agreements and major open-access sources.",
-      "limitations": "Search - rely on keyword-based Boolean search rather than semantic search\nModel variability - produce different, non-deterministic results across models\nSummary scope - draw summaries from the top 10–20 results (depending on settings and model choice), not all consulted sources\nCitation faithfulness - cited sources are real but may not support each generated claim, still need verification\nPricing - requires a paid subscription for full functionality",
-      "screenshots": [],
-      "ai_role": "Boolean query generation - use an LLM to convert natural language questions into Boolean search queries (keyword search); RAG synthesis - answer queries by synthesizing citation statements across multiple papers",
+      "coverage": "Covers 280 million+ papers, books, preprints, etc. across all disciplines and includes 1 billion+ Smart Citation statements extracted from full-text articles. Its content comes from both direct publisher indexing agreements and major open access sources.",
+      "limitations": "**Search** - rely on keyword-based Boolean search rather than semantic search\n**Model variability** - produce different, non-deterministic results across models\n**Summary scope** - draw summaries from the top 10–20 results (depending on settings and model choice), not all consulted sources\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Pricing** - requires a paid subscription for full functionality",
+      "screenshots": [
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_homepage.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_prefitering.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_search_strategy_and_all_sources.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_verify_through_citation_statement.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_fact_check_relevancy.png"
+      ],
+      "ai_role": "A RAG-based system that synthesizes across citation statements from multiple papers to answer a query.",
       "ai_roles": [
         "role1",
-        "role3",
         "role4a",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "User data may be used for service improvement, analytics, and advertising. No explicit opt-out for AI training.",
       "policy_url": "https://scite.ai/privacy",
       "needs": [
         "ai-synthesis",
@@ -997,24 +1002,27 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "AI research assistant designed to automate and accelerate scientific literature review and systematic review workflows.",
-      "unique": "Query suggestions – evaluate search queries and suggest improvements\nHybrid search - combine keyword and semantic search using SPLADE to improve recall and precision\nSynthesis table / extraction columns - add custom columns with AI-extracted fields, e.g. methodology, sample size\nResearch Reports - generate automated research overviews grounded in systematic review principles\nSystematic Review (Pro tier) - provide a guided, automated workflow that mirrors systematic review methodology; support strict inclusion and exclusion criteria (2025-12); Boolean keyword search (2026-01); for Pro users, allow up to 5,000 papers per review and 1,000 results per search (2026-02)\nResearch Agents (Pro tier) - powered by Claude-Opus-4.6, automate multi-step workflows for competitive landscape analysis, broad topic exploration, and research landscape mapping (2025-12)\nZotero integration support reference import from Zotero\nAPI access for Pro and Team users (2026-03)",
-      "similar": "SciSpace (synthesis table / table extraction)\nScite Assistant (literature search + summary)\nConsensus (literature search + summary)\nRayyan (systematic review screening)",
+      "about": "An AI research assistant designed to automate and accelerate scientific literature review and systematic review workflows.",
+      "unique": "**Query suggestions** – evaluate search queries and suggest improvements\n**Hybrid search** - combine keyword and semantic search using SPLADE\n**Literature extraction table** - add custom columns (e.g. methodology) to extract and compare across papers\n**Research Reports** - generate automated research overviews grounded in systematic review principles\n**Systematic Review** (Pro tier) - provide a guided, automated workflow that mirrors systematic review methodology; support strict inclusion and exclusion criteria (2025-12); Boolean keyword search (2026-01); for Pro users, allow up to 5,000 papers per review and 1,000 results per search (2026-02)\n**Research Agents** (Pro tier) - powered by Claude-Opus-4.6, automate multi-step workflows for competitive landscape analysis, broad topic exploration, and research landscape mapping (2025-12)\n**Browser extension** - enable automatic full-text PDF download through library subscriptions (2025-10)\n**API access** - programmatic access to Elicit content, for Pro and Team users (2026-03)",
+      "similar": "SciSpace (literature extraction table, systematic review)\nScite Assistant (literature search + summary)\nConsensus (literature search + summary)\nRayyan (systematic review screening)",
       "coverage": "Covers 138M+ academic papers across all disciplines and 545,000+ clinical trials. Draws from Semantic Scholar, PubMed, and OpenAlex, with strong open access full-text coverage and regular updates.",
-      "limitations": "Free tier limits - no data export, max. 2 custom columns, and 2 monthly reports\nFull-text access limits - rely on abstracts for most paywalled papers, which can reduce extraction quality\nRetrieval bias - SPLADE retrieval tend to favor newer papers over seminal older ones\nCitation faithfulness - cite real sources, but generated claims still require verification\nNon-deterministic results - produce different paper sets and summaries across repeated runs of the same query\nExtraction reliability - still contain extraction errors and hallucinations in Reports and Systematic Review workflows, still require verification",
+      "limitations": "**Free tier limits** - no data export, max. 2 custom columns, and 2 monthly reports\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones \n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Non-deterministic results** - produce different paper sets and summaries across repeated runs of the same query\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Find_papers_0.png",
-        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Find_papers_1.png"
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Find_papers_1.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Research_Report_0.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Research_Report_1.png"
       ],
-      "ai_role": "Hybrid search - combine keyword and semantic search using SPLADE to improve recall and precision; RAG synthesis - answer queries by summarizing each paper in relation to the research question, then synthesizing evidence across multiple papers in Reports, Systematic Review workflows, and Research Agents",
+      "ai_role": "Elicit uses SPLADE for retrieval, a learned sparse embedding method that goes beyond lexical search. It also emphasizes extraction of data rather than pure generation to enhance reliability.",
       "ai_roles": [
         "role0",
-        "role1",
         "role2",
         "role3",
-        "role4b"
+        "role4a",
+        "role4b",
+        "role5"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Usage data will be collected for “business purposes”. No explicit opt-out for AI training.",
       "policy_url": "https://elicit.com/privacy-policy",
       "needs": [
         "find-lit",
@@ -1034,24 +1042,29 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "AI platform for discovering, reading, and understanding academic papers. Offers RAG-based summaries with citations, literature matrices, and a 'Deep Review' mode.",
-      "unique": "Features a robust reading assistant to chat with individual uploaded PDFs alongside its search engine",
-      "similar": "Elicit\nScite",
-      "coverage": "200M+ papers across all academic fields.",
-      "limitations": "Free tier: up to 5 citations per summary (10 for Premium)\nDeep Review requires Premium",
-      "screenshots": [],
-      "ai_role": "Semantic search for retrieval; generative LLM for answer generation, table extraction, and dynamic reasoning.",
+      "about": "An AI-powered research assistant designed to streamline literature discovery, reading, data analysis, writing, and citation generation to accelerate the research workflow.",
+      "unique": "**Hybrid search** - combine keyword and semantic search\n**Literature extraction table** - add custom columns (e.g. methodology) to extract and compare across papers\n**Research Agent** - enable flexible agentic workflows through integration with 150+ tools and databases, including PubMed, Google Scholar, and arXiv (2025-07)\n**Chat with PDF** - explain text, equations, tables, and decode figures, charts and diagrams\n**Deep Review** (Pro tier) - automate literature reviews by consulting 1000+ papers and generate step-by-step review reports\n**AI writing suite** - support manuscript drafting with an AI writer, paraphraser, citation generator, and AI detection",
+      "similar": "Elicit (literature extraction table, systematic review)\nScite Assistant (literature search + summary)\nConsensus (literature search + summary)\nUndermind (agentic deep search)",
+      "coverage": "Covers 280M+ academic papers across all disciplines. Includes abstracts from Semantic Scholar, OpenAlex, Google Scholar, and 50M+ open access full-text articles.",
+      "limitations": "**Free tier limits** - restrict usage to 100 monthly credits; no Deep Review or data export; consult 20 papers by default and summarize only the top 5 results\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Non-deterministic Results** - produce different paper rankings and summaries across repeated runs of the same query\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required",
+      "screenshots": [
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_homepage.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_agent_01.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_agent_02.png"
+      ],
+      "ai_role": "SciSpace Agents has an Agent Gallery that shows tasks like systematic reviews, citation mapping, and other analyses, along with each agent’s workflow. It behaved more like a flexible general-purpose LLM, reasoning through tasks, identifying relevant papers, and using tools to find related work and run analyses.",
       "ai_roles": [
         "role2",
         "role3",
         "role4a",
-        "role4b"
+        "role4b",
+        "role5"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "User data may be used for service improvement, analytics, and advertising. Uploaded PDFs are not used for AI training; no explicit opt-out for chat data used in training.",
       "policy_url": "https://scispace.com/privacy-policy",
       "needs": [
         "ai-synthesis",
-        "find-lit"
+        "find-lit"      
       ]
     },
     {
@@ -1063,23 +1076,30 @@
       "free": true,
       "hkust": true,
       "viaLibrary": true,
-      "url": "https://consensus.app",
+      "url": "https://lbdiscover.hkust.edu.hk/bib/991013500276003412",
       "badge": "trial",
       "badgeText": "Trial",
       "via": "",
-      "about": "AI search engine using hybrid search to synthesize findings from scientific papers. Features a unique 'Consensus Meter' showing agreement levels for yes/no research questions.",
-      "unique": "\"Consensus Meter\" visualizes evidence direction (yes/no/mixed); highly user-friendly with strong pre-filtering",
-      "similar": "Elicit\nUndermind",
-      "coverage": "200M+ academic papers via Semantic Scholar across multiple disciplines.",
-      "limitations": "On trial at HKUST until August 2026\nLimited quota for Pro features",
-      "screenshots": [],
-      "ai_role": "Hybrid retrieval (embeddings + classic signals); LLM generates the \"Consensus Meter\" and synthesizes answers.",
+      "about": "An AI-powered academic search engine for evidence-based research that helps users find and assess scientific literature.",
+      "unique": "**Consensus Meter** - unique visual feature to categorize retrieved papers into Yes/No/Possibly/Mixed to show the distribution of scientific consensus for a yes/no question\n**Study Snapshot** – a snapshot of study, extracting population, methods/study design, sample size, outcomes, and results for each paper\n**Study classification** – label search results by study design, journal reputation, etc.\n**Medical mode** - allow search within top medical journals and clinical guidelines for evidence-based medicine queries\n**Pre- & post-filtering** - offer granular filters for study design, sample size, field, country, journal quartile, citation count, publication year, and preprint/OA exclusion\n**LibKey integration** - provide direct access to full-text articles through library subscriptions for verification\n**Deep Search** - show a transparent, PRISMA-like review flow by screening around 1,000 papers, selecting the top 50, and displaying step-by-step counts of identified, screened, and included studies\n**Scholar Agent** - powered by GPT-5, enable multi-step iterative research through specialized sub-agents (2025-10)\n**MCP server** (Mar 2026) - enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool",
+      "similar": "Elicit (literature search, systematic review)\nSciSpace (literature search, systematic review)\nScite Assistant (literature search + summary)\nUndermind (agentic deep search)",
+      "coverage": "Covers 220M+ papers and preprints across disciplines, primarily from Semantic Scholar and OpenAlex, including ~8M medical papers from the top 1,000 journals; Include abstracts and full text from open access articles, plus selective full text from partnered publishers.",
+      "limitations": "**Free tier limits** - limited Pro search and 3 Deep Search per month; Quick select up to 10 papers only; Pro top 20 and Deep Search top 50\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**STEM-centric design** - make some features less suitable for qualitative and non-biomedical disciplines\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Consensus Meter simplification** - rely on vote-counting that weighs all papers equally, which can misrepresent scientific consensus and weaken evidence synthesis\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Deep Search not fully reproducible** – not meet formal systematic review standard, fit better for scoping reviews",
+      "screenshots": [
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Consensus_ProSearch.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Consensus_DeepSearch_01.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Consensus_DeepSearch_02.png"
+      ],
+      "ai_role": "Consensus prioritizes papers by relevance and research strength signals (e.g. citation counts, recency, journal reputation, study design). It implements agentic behavior through sophisticated LLM-powered components that execute multi-step, iterative searches and analytical tasks within predefined, handcrafted workflows.",
       "ai_roles": [
         "role0",
+        "role2",
         "role3",
-        "role4b"
+        "role4a",
+        "role4b",
+        "role5"
       ],
-      "privacy_key": "green",
+      "privacy": "No AI training on user data or user chats. \n“Consensus does not use your personal or non-personal information to train large language models. Furthermore, we do not send any user data to third parties for the purpose of training large language models.”",
       "policy_url": "https://consensus.app/home/privacy-policy/",
       "needs": [
         "ai-synthesis",
@@ -1095,7 +1115,7 @@
       "free": false,
       "hkust": false,
       "viaLibrary": false,
-      "url": "https://www.scopus.com",
+      "url": "https://www.elsevier.com/products/scopus/scopus-ai",
       "badge": "",
       "badgeText": "",
       "via": "",
@@ -1111,7 +1131,7 @@
         "role2",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.elsevier.com/legal/privacy-policy",
       "needs": [
         "ai-synthesis",
@@ -1141,7 +1161,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.elsevier.com/legal/privacy-policy",
       "needs": [
         "ai-synthesis",
@@ -1174,7 +1194,7 @@
         "role3",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://clarivate.com/privacy-center/",
       "needs": [
         "ai-synthesis",
@@ -1207,7 +1227,7 @@
         "role3",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://exlibrisgroup.com/privacy-policy/",
       "needs": [
         "find-lit",
@@ -1237,7 +1257,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.statista.com/legal/privacy-statement/",
       "needs": [
         "stats-data"
@@ -1267,7 +1287,7 @@
         "role1",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.ieee.org/security-privacy.html",
       "needs": [
         "find-lit",
@@ -1298,7 +1318,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.oreilly.com/privacy.html",
       "needs": [
         "technical",
@@ -1328,7 +1348,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://www.springernature.com/gp/info/privacy-policy",
       "needs": [
         "ai-synthesis",
@@ -1358,7 +1378,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.dowjones.com/privacy-notice/",
       "needs": [
         "news-biz"
@@ -1387,7 +1407,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "",
       "needs": [
         "ai-synthesis",
@@ -1417,7 +1437,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://www.patsnap.com/privacy",
       "needs": [
         "ai-synthesis",
@@ -1447,7 +1467,7 @@
       "ai_roles": [
         "role2"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://about.jstor.org/privacy/",
       "needs": [
         "find-lit"
@@ -1476,7 +1496,7 @@
       "ai_roles": [
         "role1"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.ebsco.com/company/privacy-policy",
       "needs": [
         "find-lit"
@@ -1506,7 +1526,7 @@
         "role1",
         "role2"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://clarivate.com/privacy-center/",
       "needs": [
         "find-lit"
@@ -1535,7 +1555,7 @@
       "ai_roles": [
         "role1"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.elsevier.com/legal/privacy-policy",
       "needs": [
         "find-lit"
@@ -1564,7 +1584,7 @@
       "ai_roles": [
         "role3"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.nlm.nih.gov/web_policies.html",
       "needs": [
         "find-lit",
@@ -1595,7 +1615,7 @@
         "role3",
         "role5"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://allenai.org/privacy-policy",
       "needs": [
         "find-lit"
@@ -1625,7 +1645,7 @@
         "role3",
         "role5"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://policies.google.com/privacy",
       "needs": [
         "find-lit"
@@ -1644,20 +1664,28 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "Adaptive, iterative search engine combining semantic search with citation chaining and GPT-4 to classify papers into relevancy levels and produce a comprehensive search report.",
-      "unique": "Adapts based on discovered content; evaluates its own search exhaustiveness before delivering results",
-      "similar": "Ai2 Asta - Generate Report\nConsensus Deep Research",
-      "coverage": "Semantic Scholar (title and abstract only for free tier; OA full text for Premium).",
-      "limitations": "Free tier has limited searches and hidden records\nPremium required for full-text OA access",
-      "screenshots": [],
-      "ai_role": "Iterative query expansion; uses GPT-4 explicitly as a judge to classify paper relevance and generate a summary report.",
+      "about": "An AI-powered agentic research tool designed to automate and accelerate expert-level scientific literature search and review workflows.",
+      "unique": "**Clarifying query** - ask follow-up questions before search to refine ambiguous research topics\n**Iterative / agentic search** – conduct multiple-step searches, adapt strategy based on previously retrieved results\n**Citation graph traversal** - follow forward and backward citation trails to uncover papers beyond keyword or semantic search\n**High recall** - retrieve 150-200 papers for comprehensive coverage\n**Timeline & Categories** - organize results into chronological and thematic sections\n**Topic Match score** - help users assess result completeness by estimating the total no. of relevant papers on a topic\n**Ask Expert** - answer follow-up questions across all retrieved papers\n**Smart alerts** - monitor new publications and send updates",
+      "similar": "Ai2 Asta – Find Papers (iterative, exhaustive search)\nElicit (deep research)\nSciSpace (deep research)\nConsensus (deep research)",
+      "coverage": "Search Semantic Scholar in real time, a database of 225M+ academic papers from PubMed, arXiv, bioRxiv, and many other sources across disciplines. It searches titles and abstracts for most papers and can analyze the full text of open-access articles available in Semantic Scholar.",
+      "limitations": "**Free tier limits** - limited searches (5 per month), limited results shown/summaries; analyze abstracts, not full texts\n**Search Speed** – take 3-8+ minutes per search, making it less suitable for fast exploratory searches\n**Database Coverage** - rely entirely on Semantic Scholar, with no access to content outside its index, including paywalled full texts\n**Transparency** - provide little visibility into which queries it run, which citations it follow, or why it select certain papers\n**Reproducibility** - prevent exact replication of search steps, limiting use in formal systematic reviews\n**Citation bias** - favor highly cited and seminal papers, which may underrepresent niche or very recent literature",
+      "screenshots": [
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_search.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_results.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_project_search.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_project_report.png",
+        "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_project_follow_up.png"
+      ],
+      "ai_role": "An agent-like academic search that iteratively mimics a human researcher's process of searching, evaluating, and refining. Generally offers high retrieval quality among deep search tools.",
       "ai_roles": [
+        "role2",
         "role3",
+        "role4a",
         "role4b",
         "role5"
       ],
-      "privacy_key": "grey",
-      "policy_url": "https://undermind.ai/privacy",
+      "privacy": "Non-Personal Information may be used for service improvement. No explicit opt-out for AI training.",
+      "policy_url": "https://www.undermind.ai/privacy",
       "needs": [
         "find-lit",
         "deep-research"
@@ -1687,7 +1715,7 @@
         "role4b",
         "role5"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "",
       "needs": [
         "deep-research"
@@ -1717,7 +1745,7 @@
         "role4b",
         "role5"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://allenai.org/privacy-policy",
       "needs": [
         "deep-research"
@@ -1749,7 +1777,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://elicit.com/privacy-policy",
       "needs": [
         "deep-research"
@@ -1779,7 +1807,7 @@
         "role4b",
         "role5"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://consensus.app/home/privacy-policy/",
       "needs": [
         "deep-research"
@@ -1809,7 +1837,7 @@
         "role4b",
         "role5"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://scispace.com/privacy-policy",
       "needs": [
         "deep-research"
@@ -1839,7 +1867,7 @@
         "role4b",
         "role5"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.elsevier.com/legal/privacy-policy",
       "needs": [
         "deep-research"
@@ -1869,7 +1897,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://openai.com/policies/privacy-policy/",
       "needs": [
         "deep-research"
@@ -1899,7 +1927,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://support.google.com/gemini/answer/13594961",
       "needs": [
         "deep-research"
@@ -1929,7 +1957,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://www.perplexity.ai/privacy",
       "needs": [
         "deep-research"
@@ -1959,7 +1987,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "red",
+      "privacy": "Trains on user data",
       "policy_url": "https://x.ai/privacy-policy",
       "needs": [
         "deep-research"
@@ -1989,7 +2017,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
       "needs": [
         "deep-research"
@@ -2019,7 +2047,7 @@
         "role5",
         "role4b"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.nlm.nih.gov/web_policies.html",
       "needs": [
         "find-lit",
@@ -2049,7 +2077,7 @@
       "ai_roles": [
         "role5"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://www.wiley.com/en-us/privacy",
       "needs": [
         "find-lit",
@@ -2079,7 +2107,7 @@
       "ai_roles": [
         "role5"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://www.statista.com/legal/privacy-statement/",
       "needs": [
         "stats-data"
@@ -2109,7 +2137,7 @@
         "role5",
         "role4a"
       ],
-      "privacy_key": "green",
+      "privacy": "Does not train on user data",
       "policy_url": "https://scite.ai/privacy",
       "needs": [
         "ai-synthesis"
@@ -2138,7 +2166,7 @@
       "ai_roles": [
         "role5"
       ],
-      "privacy_key": "redgreen",
+      "privacy": "Option to opt out from training",
       "policy_url": "https://scispace.com/privacy-policy",
       "needs": [
         "deep-research",
@@ -2166,7 +2194,7 @@
       "screenshots": [],
       "ai_role": "Acts as a verification and linking layer between external LLM outputs and library holdings.",
       "ai_roles": [],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "https://clarivate.com/privacy-center/",
       "needs": [
         "find-lit"
@@ -2195,7 +2223,7 @@
       "ai_roles": [
         "role4b"
       ],
-      "privacy_key": "grey",
+      "privacy": "Training use not specified",
       "policy_url": "",
       "needs": [
         "ai-synthesis"

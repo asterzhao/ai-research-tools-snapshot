@@ -6,13 +6,6 @@
 
 const TRADITIONAL_CATS = new Set(['scholarlydb', 'opendb']);
 
-const PRIVACY_LABELS = {
-  green: 'Does not train on user data',
-  red: 'Trains on user data',
-  redgreen: 'Option to opt out from training',
-  grey: 'Training use not specified',
-};
-
 let NEEDS_DEF = [];
 let catMeta = {};
 let STAGES = [];
@@ -54,20 +47,6 @@ function getToolContent(id) {
   );
 }
 
-function getPrivacyLabel(toolId) {
-  const t = T.find((x) => x.id === toolId);
-  const k = t?.privacy_key || 'grey';
-  return PRIVACY_LABELS[k] || PRIVACY_LABELS.grey;
-}
-
-function inferPrivacyClass(label) {
-  const s = (label || '').toLowerCase();
-  if (s.includes('does not train')) return 'green';
-  if (s.includes('opt out')) return 'redgreen';
-  if (s.includes('trains on user data') || (s.includes('train') && !s.includes('does not'))) return 'red';
-  return 'grey';
-}
-
 function textToLines(text, mode) {
   if (!text || !text.trim()) return [];
   if (text.includes('\n')) return text.split('\n').map((s) => s.trim()).filter((s) => s.length > 0);
@@ -88,6 +67,15 @@ function escapeHtml(str = '') {
 function withBoldMarkdown(str = '') {
   const safe = escapeHtml(str);
   return safe.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+/** Renders free-text privacy (supports **bold** and newlines). */
+function privacyBodyHtml(text) {
+  if (!text || !String(text).trim()) return '';
+  return String(text)
+    .split('\n')
+    .map((line) => withBoldMarkdown(line))
+    .join('<br>');
 }
 
 function linesToBulletsHtml(lines, allowBold = false) {
@@ -168,17 +156,19 @@ function isToolVisible(t) {
       .filter(Boolean)
       .map((d) => `${aiRoleTagLabel(d)} ${d.title} ${d.description || ''}`)
       .join(' ');
-    if (![t.name, c.about, c.unique, c.aiRole, c.similar, c.limitations, roleBlob].join(' ').toLowerCase().includes(q)) return false;
+    if (![t.name, t.privacy, c.about, c.unique, c.aiRole, c.similar, c.limitations, roleBlob].join(' ').toLowerCase().includes(q)) return false;
   }
   return true;
 }
 
 function privacyCellHtml(toolId) {
   const t = T.find((x) => x.id === toolId);
-  const label = getPrivacyLabel(toolId);
-  const p = inferPrivacyClass(label);
+  const raw = (t?.privacy || '').trim();
   const link = t?.policy_url;
-  return `<div><div class="privacy-text p-${p}">${escapeHtml(label)}</div>${
+  const body = raw
+    ? `<div class="privacy-text">${privacyBodyHtml(raw)}</div>`
+    : '<div class="privacy-text privacy-empty">—</div>';
+  return `<div>${body}${
     link
       ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener" class="policy-link">View Policy ↗</a>`
       : '<span class="policy-na">Policy not available</span>'
@@ -496,7 +486,7 @@ function renderRolesView() {
   const root = document.getElementById('roles-view');
   if (!root) return;
   root.innerHTML =
-    '<p class="roles-intro">Tools are grouped by the primary <strong>AI roles</strong> they perform in the research workflow (from data preparation through agentic orchestration). A tool may appear under multiple roles. Tagging is indicative — products often combine several functions.</p>';
+    '<p class="roles-intro">In academic research tools, <strong>“AI”</strong> can refer to both generative models that create text and non-generative models used for <strong>retrieval, ranking, classification, and metadata enrichment</strong>. These functions are not mutually exclusive. Many tools combine several of them in one workflow, and product descriptions do not always clearly explain the underlying technical setup.</p>';
 
   AI_ROLE_DEFS.forEach((role) => {
     const toolsHere = T.filter((t) => (t.ai_roles || []).includes(role.id) && isToolVisible(t)).sort((a, b) => a.name.localeCompare(b.name));
@@ -668,10 +658,12 @@ function openPopover(t, clickedEl) {
   }
 
   document.getElementById('popAbout').textContent = c.about || '';
-  const plabel = getPrivacyLabel(t.id);
-  const pclass = inferPrivacyClass(plabel);
   const plink = t.policy_url;
-  document.getElementById('popPrivacy').innerHTML = `<span class="privacy-text p-${pclass}">${escapeHtml(plabel)}</span><br>${
+  const privRaw = (t.privacy || '').trim();
+  const privBlock = privRaw
+    ? `<span class="privacy-text">${privacyBodyHtml(privRaw)}</span><br>`
+    : '<span class="privacy-empty">—</span><br>';
+  document.getElementById('popPrivacy').innerHTML = `${privBlock}${
     plink
       ? `<a href="${escapeHtml(plink)}" target="_blank" rel="noopener" class="policy-link">View Privacy Policy ↗</a>`
       : '<span class="policy-na">Policy not available</span>'
@@ -838,7 +830,7 @@ function bootstrap(data) {
     badgeText: t.badgeText || '',
     via: t.via || '',
     needs: t.needs || [],
-    privacy_key: t.privacy_key || 'grey',
+    privacy: t.privacy || '',
     policy_url: t.policy_url || '',
     ai_roles: t.ai_roles || [],
   }));

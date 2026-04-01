@@ -1,5 +1,6 @@
 /**
  * GenAI Research Tools — loads data.json and renders Timeline, Table, and AI Roles views.
+ * Optional initial view: ?view=timeline | ?view=table | ?view=roles
  * Serve over HTTP (e.g. npx serve .) so fetch('data.json') works; file:// may be blocked.
  */
 'use strict';
@@ -134,7 +135,7 @@ function buildAiRoleHtml(t, c) {
     : '';
   const free = c.aiRole && String(c.aiRole).trim();
   const freeHtml = free
-    ? `<div class="ai-role-freetext"><div class="ai-role-freetext-label">Additional details</div><div class="ai-role-freetext-body">${escapeHtml(free).replace(/\n/g, '<br>')}</div></div>`
+    ? `<div class="ai-role-freetext"><div class="ai-role-freetext-label">Additional details</div><div class="ai-role-freetext-body">${privacyBodyHtml(free)}</div></div>`
     : '';
   if (!pillsHtml && !freeHtml) return '<p class="ai-role-empty">—</p>';
   return pillsHtml + freeHtml;
@@ -579,6 +580,19 @@ function applyAll() {
 
 const VIEW_IDS = { timeline: 'timelineView', table: 'tableView', roles: 'rolesView' };
 
+/** `?view=timeline|table|roles` — invalid or missing returns null (caller picks default). */
+function getInitialViewFromUrl() {
+  try {
+    const raw = new URLSearchParams(window.location.search).get('view');
+    if (!raw) return null;
+    const key = String(raw).trim().toLowerCase();
+    if (key === 'timeline' || key === 'table' || key === 'roles') return key;
+  } catch (_) {
+    /* ignore */
+  }
+  return null;
+}
+
 function setView(view) {
   currentView = view;
   document.querySelectorAll('.view-tab').forEach((btn) => {
@@ -798,13 +812,43 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePopover();
 });
 
+/** Merge `contentRef` chains so variants inherit shared fields from canonical tools. */
+function resolveContentRefs(tools) {
+  const byId = Object.fromEntries(tools.map((x) => [x.id, x]));
+  function resolve(id, stack) {
+    const t = byId[id];
+    if (!t) return null;
+    if (!t.contentRef) {
+      const out = { ...t };
+      delete out.contentRef;
+      return out;
+    }
+    if (stack.includes(id)) {
+      const out = { ...t };
+      delete out.contentRef;
+      return out;
+    }
+    const base = resolve(t.contentRef, [...stack, id]);
+    if (!base) {
+      const out = { ...t };
+      delete out.contentRef;
+      return out;
+    }
+    const { contentRef, ...rest } = t;
+    return { ...base, ...rest };
+  }
+  return tools.map((t) => resolve(t.id, []));
+}
+
 function bootstrap(data) {
   NEEDS_DEF = data.needsDef || [];
   catMeta = data.catMeta || {};
   STAGES = data.stages || [];
   AI_ROLE_DEFS = data.aiRoleDefinitions || [];
 
-  data.tools.forEach((t) => {
+  const tools = resolveContentRefs(data.tools || []);
+
+  tools.forEach((t) => {
     CONTENT_BY_ID[t.id] = {
       about: t.about || '',
       aiRole: t.ai_role || '',
@@ -816,7 +860,7 @@ function bootstrap(data) {
     };
   });
 
-  T = data.tools.map((t) => ({
+  T = tools.map((t) => ({
     id: t.id,
     name: t.name,
     cat: t.cat,
@@ -842,7 +886,7 @@ function bootstrap(data) {
   applyTimelineFilters();
   renderToolSelector();
   renderTable();
-  setView('timeline');
+  setView(getInitialViewFromUrl() || 'timeline');
 }
 
 function wireViewTabs() {

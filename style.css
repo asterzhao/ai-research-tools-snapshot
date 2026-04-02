@@ -317,8 +317,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8fafc;color:#1e293b;l
 .pop-screenshots-row .pop-ss-thumb img{width:100%;height:100%;object-fit:cover;}
 .pop-screenshots-row .pop-ss-thumb .zoom-hint{position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:.15s;color:#fff;font-size:.6rem;font-weight:600;}
 .pop-screenshots-row .pop-ss-thumb:hover .zoom-hint{opacity:1;}
-#popScreenshotsSection{display:none;}
-#popScreenshotsSection.is-visible{display:block;}
+.pop-section.pop-section--hidden{display:none!important;}
+.pop-section.pop-section--flush-top{border-top:none!important;margin-top:0!important;padding-top:0!important;}
 .pop-left-label{font-size:.62rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.5px;}
 .pop-ss-thumb{width:100%;aspect-ratio:16/10;border-radius:8px;overflow:hidden;cursor:pointer;flex-shrink:0;background:#e2e8f0;border:2px solid transparent;transition:.15s;position:relative;}
 .pop-ss-thumb:hover{border-color:#3B82F6;}

@@ -34,6 +34,40 @@ function hexToRgba(hex, alpha) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
+/** Coerce text fields to string (JSON sometimes has [] instead of ""). */
+function strField(v) {
+  if (v == null || v === '') return '';
+  if (Array.isArray(v)) return v.length ? v.join('\n') : '';
+  return String(v);
+}
+
+/** True if field is empty, whitespace, or literal "[]" from data. */
+function isBlankField(v) {
+  const s = strField(v).trim();
+  if (!s) return true;
+  if (s === '[]') return true;
+  return false;
+}
+
+function hasPrivacyPopoverContent(t) {
+  return !isBlankField(t.privacy) || !isBlankField(t.policy_url);
+}
+
+function hasAiRoleSectionContent(t, c) {
+  const ids = t.ai_roles || [];
+  if (ids.length > 0) return true;
+  return !isBlankField(c.aiRole);
+}
+
+const LIMITS_H5 = `<h5>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          Limitations
+        </h5>`;
+
 function getToolContent(id) {
   return (
     CONTENT_BY_ID[id] || {
@@ -49,11 +83,12 @@ function getToolContent(id) {
 }
 
 function textToLines(text, mode) {
-  if (!text || !text.trim()) return [];
-  if (text.includes('\n')) return text.split('\n').map((s) => s.trim()).filter((s) => s.length > 0);
-  if (mode === 'similar') return text.replace(/\.$/, '').split(/,\s*/).map((s) => s.trim()).filter((s) => s.length > 0);
-  const items = text.split(/\.\s+(?=[A-Z])/).map((s) => s.replace(/\.$/, '').trim()).filter((s) => s.length > 2);
-  return items.length > 1 ? items : [text.replace(/\.$/, '').trim()];
+  const raw = strField(text);
+  if (!raw.trim()) return [];
+  if (raw.includes('\n')) return raw.split('\n').map((s) => s.trim()).filter((s) => s.length > 0);
+  if (mode === 'similar') return raw.replace(/\.$/, '').split(/,\s*/).map((s) => s.trim()).filter((s) => s.length > 0);
+  const items = raw.split(/\.\s+(?=[A-Z])/).map((s) => s.replace(/\.$/, '').trim()).filter((s) => s.length > 2);
+  return items.length > 1 ? items : [raw.replace(/\.$/, '').trim()];
 }
 
 function escapeHtml(str = '') {
@@ -133,11 +168,11 @@ function buildAiRoleHtml(t, c) {
   const pillsHtml = pills
     ? `<div class="ai-role-pills" role="list" aria-label="AI role tags">${pills}</div>`
     : '';
-  const free = c.aiRole && String(c.aiRole).trim();
+  const free = !isBlankField(c.aiRole) ? strField(c.aiRole) : '';
   const freeHtml = free
     ? `<div class="ai-role-freetext"><div class="ai-role-freetext-label">Additional details</div><div class="ai-role-freetext-body">${privacyBodyHtml(free)}</div></div>`
     : '';
-  if (!pillsHtml && !freeHtml) return '<p class="ai-role-empty">—</p>';
+  if (!pillsHtml && !freeHtml) return '';
   return pillsHtml + freeHtml;
 }
 
@@ -164,11 +199,14 @@ function isToolVisible(t) {
 
 function privacyCellHtml(toolId) {
   const t = T.find((x) => x.id === toolId);
-  const raw = (t?.privacy || '').trim();
-  const link = t?.policy_url;
+  const raw = strField(t?.privacy).trim();
+  const link = strField(t?.policy_url).trim();
+  if (!raw && !link) {
+    return '<div class="privacy-text privacy-empty">—</div>';
+  }
   const body = raw
     ? `<div class="privacy-text">${privacyBodyHtml(raw)}</div>`
-    : '<div class="privacy-text privacy-empty">—</div>';
+    : '<div class="privacy-text privacy-empty"></div>';
   return `<div>${body}${
     link
       ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener" class="policy-link">View Policy ↗</a>`
@@ -406,7 +444,7 @@ function renderTable() {
             <div class="tb-chevron"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
         </td>
-        <td class="tb-text col-about">${escapeHtml(c.about || '—')}</td>
+        <td class="tb-text col-about">${isBlankField(c.about) ? '—' : escapeHtml(c.about)}</td>
         <td class="col-privacy">${privacyCellHtml(t.id)}</td>`;
       tbody.appendChild(tr);
 
@@ -424,29 +462,34 @@ function renderTable() {
         </div>`;
       }
 
+      const aiRoleBlock = buildAiRoleHtml(t, c);
+      const detailParts = [];
+      if (!isBlankField(c.coverage)) {
+        detailParts.push(
+          `<div class="detail-section detail-section--full"><h5>Data Coverage</h5><p class="detail-text">${escapeHtml(c.coverage)}</p></div>`
+        );
+      }
+      if (!isBlankField(c.unique)) {
+        detailParts.push(`<div class="detail-section detail-section--unique"><h5>Unique Features</h5>${toBullets(c.unique, 'bullets', true)}</div>`);
+      }
+      if (!isBlankField(c.limitations)) {
+        detailParts.push(`<div class="detail-section detail-section--limitations">${LIMITS_H5}${toBullets(c.limitations, 'bullets', true)}</div>`);
+      }
+      if (aiRoleBlock) {
+        detailParts.push(`<div class="detail-section detail-section--ai-role"><h5>AI's Role</h5>${aiRoleBlock}</div>`);
+      }
+      if (!isBlankField(c.similar)) {
+        detailParts.push(`<div class="detail-section"><h5>Similar Tools</h5>${similarToBullets(c.similar)}</div>`);
+      }
+      if (screenshotsHtml) detailParts.push(screenshotsHtml);
+
       const dtr = document.createElement('tr');
       dtr.className = 'tool-row-detail';
       dtr.id = 'detail-' + t.id;
       dtr.classList.toggle('open', allExpanded);
       if (allExpanded) tr.classList.add('expanded');
       dtr.innerHTML = `<td colspan="3"><div class="detail-panel">
-        <div class="detail-grid">
-        <div class="detail-section detail-section--full"><h5>Data Coverage</h5><p class="detail-text">${escapeHtml(c.coverage || '—')}</p></div>
-        <div class="detail-section detail-section--unique"><h5>Unique Features</h5>${toBullets(c.unique, 'bullets', true)}</div>
-        <div class="detail-section detail-section--limitations">
-        <h5>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-            <line x1="12" y1="9" x2="12" y2="13"></line>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-          </svg>
-          Limitations
-        </h5>
-        ${toBullets(c.limitations, 'bullets', true)}
-      </div>
-        <div class="detail-section detail-section--ai-role"><h5>AI's Role</h5>${buildAiRoleHtml(t, c)}</div>
-        <div class="detail-section"><h5>Similar Tools</h5>${similarToBullets(c.similar)}</div>
-          ${screenshotsHtml}
+        <div class="detail-grid">${detailParts.join('')}
         </div>
         <div class="detail-footer">${
           t.url
@@ -652,7 +695,7 @@ function openPopover(t, clickedEl) {
   if (c.screenshots && c.screenshots.length > 0) {
     pop.classList.add('has-screenshots');
     pop.classList.remove('no-screenshots');
-    popScreenshotsSection.classList.add('is-visible');
+    popScreenshotsSection.classList.remove('pop-section--hidden');
     popScreenshotsWrap.innerHTML = '';
     c.screenshots.forEach((src, i) => {
       const th = document.createElement('div');
@@ -667,21 +710,22 @@ function openPopover(t, clickedEl) {
   } else {
     pop.classList.remove('has-screenshots');
     pop.classList.add('no-screenshots');
-    popScreenshotsSection.classList.remove('is-visible');
+    popScreenshotsSection.classList.add('pop-section--hidden');
     popScreenshotsWrap.innerHTML = '';
   }
 
   document.getElementById('popAbout').textContent = c.about || '';
-  const plink = t.policy_url;
-  const privRaw = (t.privacy || '').trim();
-  const privBlock = privRaw
-    ? `<span class="privacy-text">${privacyBodyHtml(privRaw)}</span><br>`
-    : '<span class="privacy-empty">—</span><br>';
-  document.getElementById('popPrivacy').innerHTML = `${privBlock}${
-    plink
+  const plink = strField(t.policy_url).trim();
+  const privRaw = strField(t.privacy).trim();
+  document.getElementById('popPrivacy').innerHTML = privRaw
+    ? `<span class="privacy-text">${privacyBodyHtml(privRaw)}</span><br>${
+        plink
+          ? `<a href="${escapeHtml(plink)}" target="_blank" rel="noopener" class="policy-link">View Privacy Policy ↗</a>`
+          : '<span class="policy-na">Policy not available</span>'
+      }`
+    : plink
       ? `<a href="${escapeHtml(plink)}" target="_blank" rel="noopener" class="policy-link">View Privacy Policy ↗</a>`
-      : '<span class="policy-na">Policy not available</span>'
-  }`;
+      : '';
   document.getElementById('popCoverage').textContent = c.coverage || '';
   document.getElementById('popUnique').innerHTML = toBullets(c.unique, 'bullets', true);
   document.getElementById('popLimits').innerHTML = toBullets(c.limitations, 'bullets', true);
@@ -690,6 +734,25 @@ function openPopover(t, clickedEl) {
   document.getElementById('popLinkWrap').innerHTML = t.url
     ? `<a class="visit-btn" href="${escapeHtml(t.url)}" target="_blank" rel="noopener">${t.viaLibrary ? 'Visit via Library ↗' : 'Visit ' + escapeHtml(t.name) + ' ↗'}</a>`
     : `<p class="detail-url-missing">URL not yet available</p>`;
+
+  function popSec(id, hide) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('pop-section--hidden', hide);
+  }
+  popSec('popSecAbout', isBlankField(c.about));
+  popSec('popSecPrivacy', !hasPrivacyPopoverContent(t));
+  popSec('popSecCoverage', isBlankField(c.coverage));
+  popSec('popSecUnique', isBlankField(c.unique));
+  popSec('popSecLimits', isBlankField(c.limitations));
+  popSec('popSecAiRole', !hasAiRoleSectionContent(t, c));
+  popSec('popSecSimilar', isBlankField(c.similar));
+
+  let firstVis = true;
+  pop.querySelectorAll('.pop-right > .pop-section').forEach((sec) => {
+    const hidden = sec.classList.contains('pop-section--hidden');
+    sec.classList.toggle('pop-section--flush-top', !hidden && firstVis);
+    if (!hidden) firstVis = false;
+  });
 
   bg.style.height = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) + 'px';
   bg.style.display = 'block';
@@ -850,13 +913,13 @@ function bootstrap(data) {
 
   tools.forEach((t) => {
     CONTENT_BY_ID[t.id] = {
-      about: t.about || '',
-      aiRole: t.ai_role || '',
-      unique: t.unique || '',
-      similar: t.similar || '',
-      coverage: t.coverage || '',
-      limitations: t.limitations || '',
-      screenshots: t.screenshots || [],
+      about: strField(t.about),
+      aiRole: strField(t.ai_role),
+      unique: strField(t.unique),
+      similar: strField(t.similar),
+      coverage: strField(t.coverage),
+      limitations: strField(t.limitations),
+      screenshots: Array.isArray(t.screenshots) ? t.screenshots : [],
     };
   });
 
@@ -872,10 +935,10 @@ function bootstrap(data) {
     url: t.url || '',
     badge: t.badge || '',
     badgeText: t.badgeText || '',
-    via: t.via || '',
+    via: strField(t.via),
     needs: t.needs || [],
-    privacy: t.privacy || '',
-    policy_url: t.policy_url || '',
+    privacy: strField(t.privacy),
+    policy_url: strField(t.policy_url),
     ai_roles: t.ai_roles || [],
   }));
 

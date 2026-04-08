@@ -197,7 +197,8 @@ function isToolVisible(t) {
   return true;
 }
 
-function privacyCellHtml(toolId) {
+/** Privacy block for expanded table row (paired with Data Coverage or standalone). */
+function privacyExpandedHtml(toolId) {
   const t = T.find((x) => x.id === toolId);
   const raw = strField(t?.privacy).trim();
   const link = strField(t?.policy_url).trim();
@@ -207,11 +208,26 @@ function privacyCellHtml(toolId) {
   const body = raw
     ? `<div class="privacy-text">${privacyBodyHtml(raw)}</div>`
     : '<div class="privacy-text privacy-empty"></div>';
-  return `<div>${body}${
+  return `${body}${
     link
       ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener" class="policy-link">View Policy ↗</a>`
       : '<span class="policy-na">Policy not available</span>'
-  }</div>`;
+  }`;
+}
+
+function hasPrivacyExpandedContent(toolId) {
+  const t = T.find((x) => x.id === toolId);
+  const raw = strField(t?.privacy).trim();
+  const link = strField(t?.policy_url).trim();
+  return !!(raw || link);
+}
+
+function accessCellHtml(t) {
+  if (!t.url) {
+    return '<span class="table-access-missing">URL not yet available</span>';
+  }
+  const label = t.viaLibrary ? 'Visit via Library ↗' : 'Visit ' + escapeHtml(t.name) + ' ↗';
+  return `<a class="visit-btn visit-btn--table" href="${escapeHtml(t.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${label}</a>`;
 }
 
 function iconHtml(t) {
@@ -425,7 +441,6 @@ function renderTable() {
     tbody.appendChild(sr);
     stageTools.forEach((t) => {
       const c = getToolContent(t.id);
-      const cm = catMeta[t.cat];
       const tr = document.createElement('tr');
       tr.className = 'tool-row-head';
       tr.id = 'head-' + t.id;
@@ -437,7 +452,6 @@ function renderTable() {
             <div class="tb-info">
               <div class="tb-name-row">
                 <span class="tb-name">${escapeHtml(t.name)}</span>
-                ${t.url ? `<a href="${escapeHtml(t.url)}" target="_blank" class="tb-external-link" onclick="event.stopPropagation()">↗</a>` : ''}
               </div>
               ${t.via ? `<div class="tb-cat">via ${escapeHtml(t.via)}</div>` : ''}
             </div>
@@ -445,7 +459,7 @@ function renderTable() {
           </div>
         </td>
         <td class="tb-text col-about">${isBlankField(c.about) ? '—' : escapeHtml(c.about)}</td>
-        <td class="col-privacy">${privacyCellHtml(t.id)}</td>`;
+        <td class="col-access">${accessCellHtml(t)}</td>`;
       tbody.appendChild(tr);
 
       let screenshotsHtml = '';
@@ -464,10 +478,17 @@ function renderTable() {
 
       const aiRoleBlock = buildAiRoleHtml(t, c);
       const detailParts = [];
-      if (!isBlankField(c.coverage)) {
-        detailParts.push(
-          `<div class="detail-section detail-section--full"><h5>Data Coverage</h5><p class="detail-text">${escapeHtml(c.coverage)}</p></div>`
-        );
+      const hasCov = !isBlankField(c.coverage);
+      const hasPriv = hasPrivacyExpandedContent(t.id);
+      if (hasCov || hasPriv) {
+        const covBlock = hasCov
+          ? `<p class="detail-text">${escapeHtml(c.coverage)}</p>`
+          : '<p class="detail-text detail-text--empty">—</p>';
+        const privBlock = hasPriv
+          ? `<div class="detail-privacy-inner">${privacyExpandedHtml(t.id)}</div>`
+          : '<div class="detail-privacy-inner"><span class="privacy-text privacy-empty">—</span></div>';
+        detailParts.push(`<div class="detail-section detail-section--coverage"><h5>Data Coverage</h5>${covBlock}</div>`);
+        detailParts.push(`<div class="detail-section detail-section--privacy"><h5>Privacy</h5>${privBlock}</div>`);
       }
       if (!isBlankField(c.unique)) {
         detailParts.push(`<div class="detail-section detail-section--unique"><h5>Unique Features</h5>${toBullets(c.unique, 'bullets', true)}</div>`);
@@ -491,11 +512,6 @@ function renderTable() {
       dtr.innerHTML = `<td colspan="3"><div class="detail-panel">
         <div class="detail-grid">${detailParts.join('')}
         </div>
-        <div class="detail-footer">${
-          t.url
-            ? `<a class="visit-btn" href="${escapeHtml(t.url)}" target="_blank" rel="noopener">${t.viaLibrary ? 'Visit via Library ↗' : 'Visit ' + escapeHtml(t.name) + ' ↗'}</a>`
-            : '<span class="detail-url-missing">URL not yet available</span>'
-        }</div>
       </div></td>`;
       tbody.appendChild(dtr);
     });
@@ -526,14 +542,36 @@ window.toggleExpandAll = function toggleExpandAll() {
   if (pts) pts.setAttribute('points', allExpanded ? '18 15 12 9 6 15' : '6 9 12 15 18 9');
 };
 
+/** Order of `cat` values as they appear in timeline stages (scholarly DB first → … → library layer). */
+function timelineCatOrderRank() {
+  const order = [];
+  STAGES.forEach((s) => {
+    (s.groups || []).forEach((g) => {
+      if (g.cat && !order.includes(g.cat)) order.push(g.cat);
+    });
+  });
+  return order;
+}
+
 function renderRolesView() {
   const root = document.getElementById('roles-view');
   if (!root) return;
   root.innerHTML =
     '<p class="roles-intro">In academic research tools, <strong>“AI”</strong> can refer to both generative models that create text and non-generative models used for <strong>retrieval, ranking, classification, and metadata enrichment</strong>. These functions are not mutually exclusive. Many tools combine several of them in one workflow, and product descriptions do not always clearly explain the underlying technical setup.</p>';
 
+  const catRank = timelineCatOrderRank();
+  const rankOf = (cat) => {
+    const i = catRank.indexOf(cat);
+    return i === -1 ? 9999 : i;
+  };
+
   AI_ROLE_DEFS.forEach((role) => {
-    const toolsHere = T.filter((t) => (t.ai_roles || []).includes(role.id) && isToolVisible(t)).sort((a, b) => a.name.localeCompare(b.name));
+    const toolsHere = T.filter((t) => (t.ai_roles || []).includes(role.id) && isToolVisible(t)).sort((a, b) => {
+      const ra = rankOf(a.cat);
+      const rb = rankOf(b.cat);
+      if (ra !== rb) return ra - rb;
+      return strField(a.name).trim().localeCompare(strField(b.name).trim(), undefined, { sensitivity: 'base', numeric: true });
+    });
     const section = document.createElement('section');
     section.className = 'roles-section';
     section.innerHTML = `

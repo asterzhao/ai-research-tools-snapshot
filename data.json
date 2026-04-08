@@ -363,7 +363,7 @@
         "role1",
         "role2",
         "role3",
-        "role4b"
+        "role4a"
       ],
       "privacy": "No specific mentioning of AI training on user data in the privacy policy.",
       "policy_url": "https://policies.google.com/privacy",
@@ -440,7 +440,6 @@
       "ai_role": "Use an LLM to convert natural language questions into Boolean search and synthesizes across the top 8 retrieved abstracts to produce narrative answers",
       "ai_roles": [
         "role1",
-        "role3",
         "role4c"
       ],
       "needs": [
@@ -540,7 +539,7 @@
         "role1",
         "role2",
         "role3",
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -563,7 +562,7 @@
         "role1",
         "role2",
         "role3",
-        "role4b",
+        "role4c",
         "role5"
       ],
       "needs": [
@@ -597,7 +596,7 @@
         "role2",
         "role3",
         "role4b",
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -629,7 +628,7 @@
         "role2",
         "role3",
         "role4b",
-        "role4b",
+        "role4c",
         "role5"
       ],
       "needs": [
@@ -748,7 +747,6 @@
       "ai_roles": [
         "role1",
         "role2",
-        "role4b",
         "role4c"
       ],
       "needs": [
@@ -804,7 +802,7 @@
       "screenshots": [],
       "ai_role": "RAG-based synthesis over technical book chapters and video transcripts.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "technical",
@@ -880,7 +878,7 @@
       "ai_roles": [
         "role2",
         "role3",
-        "role4b"
+        "role4a"
       ],
       "needs": [
         "find-lit"
@@ -935,7 +933,7 @@
       "screenshots": [],
       "ai_role": "AI-assisted summarization and entity extraction from business news.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "news-biz",
@@ -963,7 +961,7 @@
       "screenshots": [],
       "ai_role": "LLM synthesizes answers based on retrieved statistical reports and data points.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.statista.com/imprint/#privacy",
@@ -992,7 +990,7 @@
       "screenshots": [],
       "ai_role": "LLM synthesizes answers based on retrieved statistical reports and data points.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.statista.com/imprint/#privacy",
@@ -1071,7 +1069,7 @@
       "screenshots": [],
       "ai_role": "LLM synthesizes answers grounded in CNKI's vast Chinese academic corpus.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -1126,7 +1124,7 @@
       "screenshots": [],
       "ai_role": "LLM synthesizes patent insights, identifies technology trends, and answers questions grounded in patent data.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -1269,8 +1267,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM orchestrates query formulation, dynamically triggers retrieval via MCP, judges relevance, and synthesizes.",
       "ai_roles": [
-        "role5",
-        "role4b"
+        "role5"
       ],
       "needs": [
         "find-lit",
@@ -1335,7 +1332,6 @@
       "screenshots": [],
       "ai_role": "LLM orchestrates retrieval of citation statements to validate claims dynamically.",
       "ai_roles": [
-        "role4c",
         "role5"
       ],
       "needs": [
@@ -1372,8 +1368,7 @@
         "role2",
         "role3",
         "role4b",
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "privacy": "Usage data will be collected for “business purposes”. No explicit opt-out for AI training.",
       "policy_url": "https://elicit.com/operations/privacy",
@@ -1385,7 +1380,7 @@
     {
       "id": "elicit-sr",
       "contentRef": "elicit-find",
-      "name": "Elicit - Research Report/Systematic Review",
+      "name": "Elicit - Research Report",
       "cat": "deepresearch",
       "abbr": "EL-SR",
       "free": false,
@@ -1432,8 +1427,8 @@
         "role0",
         "role2",
         "role3",
-        "role4b",
-        "role4b",
+        "role4a",
+        "role4c",
         "role5"
       ],
       "privacy": "No AI training on user data or user chats. \n“Consensus does not use your personal or non-personal information to train large language models. Furthermore, we do not send any user data to third parties for the purpose of training large language models.”",
@@ -1459,7 +1454,9 @@
       "screenshots": [],
       "ai_role": "Generative LLM handles iterative query formulation, ranking judgment, and extensive synthesis.",
       "ai_roles": [
+        "role4a",
         "role4b",
+        "role4c",
         "role5"
       ],
       "needs": [
@@ -1494,7 +1491,7 @@
         "role2",
         "role3",
         "role4a",
-        "role4b",
+        "role4c",
         "role5"
       ],
       "privacy": "User data may be used for service improvement, analytics, and advertising. Uploaded PDFs are not used for AI training; no explicit opt-out for chat data used in training.",
@@ -1519,7 +1516,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM performs iterative sub-query generation and synthesis.",
       "ai_roles": [
-        "role4b",
+        "role4c",
         "role5"
       ],
       "needs": [
@@ -1593,8 +1590,8 @@
       "cat": "deepresearch",
       "abbr": "AS-QA",
       "ai_roles": [
-        "role4b",
-        "role4c"
+        "role4c",
+        "role5"
       ],
       "needs": [
         "ai-synthesis",
@@ -1630,7 +1627,6 @@
       "ai_roles": [
         "role2",
         "role3",
-        "role4b",
         "role4c",
         "role5"
       ],
@@ -1662,7 +1658,7 @@
       "screenshots": [],
       "ai_role": "Retrieval and synthesis via generative LLM deep search.",
       "ai_roles": [
-        "role4b",
+        "role4c",
         "role5"
       ],
       "privacy": "",
@@ -1810,7 +1806,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM with web browsing capabilities for general synthesis.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://support.google.com/gemini/answer/13594961",
@@ -1832,8 +1828,8 @@
       "screenshots": [],
       "ai_role": "Generative LLM performing iterative sub-query generation and synthesis.",
       "ai_roles": [
-        "role5",
-        "role4b"
+        "role4c",
+        "role5"
       ],
       "needs": [
         "deep-research"
@@ -1861,7 +1857,6 @@
       "ai_role": "Query individual documents for explanations of content, or synthesizing insights across multiple sources into coherent, cited outputs",
       "ai_roles": [
         "role4a",
-        "role4b",
         "role4c"
       ],
       "privacy": "",
@@ -1891,7 +1886,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM for reasoning, writing, coding, and synthesis — no direct academic database retrieval.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://openai.com/policies/privacy-policy/",
@@ -1915,8 +1910,8 @@
       "screenshots": [],
       "ai_role": "Purely generative LLM handling iterative query formulation, ranking judgment, and extensive synthesis.",
       "ai_roles": [
-        "role5",
-        "role4b"
+        "role4c",
+        "role5"
       ],
       "needs": [
         "deep-research"
@@ -1941,10 +1936,6 @@
       "coverage": [],
       "limitations": "Requires programming skills\nAPI costs and quotas apply\nInstitutional account needed",
       "screenshots": [],
-      "ai_role": "Raw LLM inference engine for custom applications.",
-      "ai_roles": [
-        "role4b"
-      ],
       "privacy": "",
       "policy_url": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
       "needs": [
@@ -1972,7 +1963,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM specializing in long-document analysis, research synthesis, and structured writing.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.anthropic.com/legal/privacy",
@@ -2001,7 +1992,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM with real-time web and X/Twitter access for synthesis.",
       "ai_roles": [
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://x.ai/legal/privacy-policy",
@@ -2024,7 +2015,7 @@
       "ai_role": "Generative LLM synthesis producing report-style outputs.",
       "ai_roles": [
         "role5",
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "deep-research"
@@ -2050,9 +2041,6 @@
       "limitations": "No direct database access\nMay hallucinate\n8 HKD free credit per month\nInstitutional account required",
       "screenshots": [],
       "ai_role": "Generative LLMs handle all reasoning, drafting, and coding tasks without direct academic retrieval.",
-      "ai_roles": [
-        "role4b"
-      ],
       "privacy": "",
       "policy_url": "https://itsc.hkust.edu.hk/services/it-infrastructure/privacy-policy-statement",
       "needs": [
@@ -2079,9 +2067,6 @@
       "limitations": "Limited credits for free users\nSome models require subscription\nUser data shared with third-party AI providers",
       "screenshots": [],
       "ai_role": "Aggregates multiple generative LLMs into a single chat interface.",
-      "ai_roles": [
-        "role4b"
-      ],
       "privacy": "",
       "policy_url": "https://poe.com/privacy",
       "needs": [
@@ -2110,7 +2095,7 @@
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
       "ai_roles": [
         "role2",
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.perplexity.ai/hub/legal/privacy-policy",
@@ -2134,7 +2119,7 @@
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
       "ai_roles": [
         "role5",
-        "role4b"
+        "role4c"
       ],
       "needs": [
         "deep-research"
@@ -2161,8 +2146,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM with Bing web search grounding for real-time answer synthesis with inline citations.",
       "ai_roles": [
-        "role2",
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.microsoft.com/en-us/privacy/privacystatement",
@@ -2192,7 +2176,7 @@
       "ai_role": "Agentic LLM conducting multi-step web search and synthesis to produce long-form research reports.",
       "ai_roles": [
         "role5",
-        "role4b"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
@@ -2223,13 +2207,14 @@
       "ai_roles": [
         "role1",
         "role3",
-        "role4b"
+        "role4c"
       ],
       "privacy": "“Neither your input nor the licensed content are stored by the LLM and used for any purpose other than the immediate interaction session. Clarivate does not use your data to directly or indirectly train LLMs”",
       "policy_url": "https://knowledge.exlibrisgroup.com/Primo/Product_Materials/001_Next_Discovery_Experience_(NDE)/Primo_Research_Assistant",
       "needs": [
         "find-lit",
-        "ai-synthesis"      ]
+        "ai-synthesis"      
+      ]
     },
     {
       "id": "nature-ra",

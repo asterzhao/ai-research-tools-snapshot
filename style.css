@@ -336,6 +336,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8fafc;color:#1e293b;l
 .pop-section.pop-section--unique h4{color:#7184b2;}
 .pop-section.pop-section--limitations h4{color:#991b1b;}
 .pop-section p{font-size:.81rem;color:#374151;line-height:1.55;}
+.pop-section #popPrivacy{font-size:.81rem;color:#374151;line-height:1.55;}
+.pop-section #popPrivacy .privacy-text{font-size:inherit;line-height:inherit;}
 .unique-box{background:#f1f5f9;border-left:3px solid #cbd5e1;padding:8px 12px;border-radius:0 6px 6px 0;}
 .detail-section .unique-box{margin-top:4px;}
 .limit-box{background:#fffbeb;border-left:3px solid #f59e0b;padding:8px 12px;border-radius:0 6px 6px 0;}

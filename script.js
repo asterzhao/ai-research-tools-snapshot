@@ -19,7 +19,7 @@ let currentFilter = 'all';
 let currentNeed = 'all';
 let currentSearch = '';
 let currentView = 'timeline';
-let showTraditional = false;
+let showTraditional = true;
 let selectedTools = new Set();
 let allExpanded = false;
 let lbImages = [];
@@ -557,7 +557,7 @@ function renderRolesView() {
   const root = document.getElementById('roles-view');
   if (!root) return;
   root.innerHTML =
-    '<p class="roles-intro">In academic research tools, <strong>“AI”</strong> can refer to both generative models that create text and non-generative models used for <strong>retrieval, ranking, classification, and metadata enrichment</strong>. These functions are not mutually exclusive. Many tools combine several of them in one workflow, and product descriptions do not always clearly explain the underlying technical setup.</p>';
+    '<p class="roles-intro">In academic research tools, <strong>“AI”</strong> can refer to both <strong>generative models</strong> that <em>create text</em> and <strong>non-generative models</strong> used for <em>retrieval, ranking, classification, and metadata enrichment</em>. These functions are not mutually exclusive. Many tools combine several of them in one workflow under the label "AI-powered", but product descriptions do not always clearly explain how the system actually works.</p><p class="roles-intro">This page attempts to break down the different roles AI can play before, during, and after the "search" process, with a few example tools for each role.</p>';
 
   const catRank = timelineCatOrderRank();
   const rankOf = (cat) => {
@@ -980,7 +980,9 @@ function bootstrap(data) {
     ai_roles: t.ai_roles || [],
   }));
 
-  selectedTools = new Set(T.filter((t) => !TRADITIONAL_CATS.has(t.cat)).map((t) => t.id));
+  selectedTools = new Set(
+    T.filter((t) => showTraditional || !TRADITIONAL_CATS.has(t.cat)).map((t) => t.id)
+  );
 
   renderNeedPills();
   renderTimeline();

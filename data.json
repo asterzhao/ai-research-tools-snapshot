@@ -333,7 +333,7 @@
       "limitations": "No filtering for **peer-reviewed content**\n**Metadata** is inconsistent\n**Ranking algorithm** is not transparent\n**Advanced search operators** are limited",
       "screenshots": [],
       "ai_role": "",
-      "ai_roles": "",
+      "ai_roles": [],
       "privacy": "",
       "policy_url": "https://policies.google.com/privacy",
       "needs": [
@@ -386,7 +386,7 @@
       "via": "",
       "about": "Clarivate's largest abstract and citation database of peer-reviewed literature.",
       "similar": "Scopus\nEBSCOhost",
-      "coverage": "WoS Core Collection overs 22k+ peer-reviewed journals in sciences, social sciences, arts & humanities.",
+      "coverage": "WoS Core Collection covers 22k+ peer-reviewed journals in sciences, social sciences, arts & humanities.",
       "screenshots": [],
       "ai_roles": [
         "role0"
@@ -510,7 +510,9 @@
       "ai_roles": [
         "role1"
       ],
-      "needs": []
+      "needs": [
+        "find-lit"
+      ]
     },
     {
       "id": "scopus-ai",
@@ -771,8 +773,6 @@
       "coverage": "Indexes 70,000+ books, videos, online courses, and live training sessions primarily covering software development, data science, AI/ML, cloud, cybersecurity, UX design, and business technology, with content exclusively from O'Reilly Media's editorially curated library.",
       "limitations": "Limited to O'Reilly content\nTechnology and business focus only\nInstitutional subscription required",
       "screenshots": [],
-      "ai_role": "RAG-based synthesis over technical book chapters and video transcripts.",
-      "ai_roles": [],
       "privacy": "",
       "policy_url": "https://www.oreilly.com/privacy.html",
       "needs": [
@@ -797,29 +797,13 @@
       "coverage": "Indexes 70,000+ books, videos, online courses, and live training sessions primarily covering software development, data science, AI/ML, cloud, cybersecurity, UX design, and business technology, with content exclusively from O'Reilly Media's editorially curated library.",
       "limitations": "**Content scope** - cover only O’Reilly-published material, with no access to peer-reviewed journals, conference papers, or academic databases.\n**Response coverage** - remain limited to O’Reilly’s catalog, so niche or cutting-edge research topics may be missing or outdated.\n**Institutional subscription required**",
       "screenshots": [],
-      "ai_role": "RAG-based synthesis over technical book chapters and video transcripts.",
+      "ai_role": "RAG-based synthesis tool that retrieves, ranks, validates, and trims relevant content from technical book chapters and video transcripts to answer user questions.",
       "ai_roles": [
+        "role1",
+        "role2",
+        "role3",
         "role4c"
       ],
-      "needs": [
-        "technical",
-        "ai-synthesis"
-      ]
-    },
-    {
-      "id": "oreilly-mcp",
-      "contentRef": "oreilly-ai",
-      "name": "O'Reilly MCP",
-      "cat": "mcp",
-      "abbr": "OR-MCP",
-      "free": false,
-      "hkust": false,
-      "viaLibrary": false,
-      "badge": "",
-      "badgeText": "",
-      "via": "",
-      "similar": "Statista MCP",
-      "screenshots": [],
       "needs": [
         "technical",
         "ai-synthesis"
@@ -993,8 +977,8 @@
       "abbr": "ST-MCP",
       "hkust": false,
       "viaLibrary": false,
-      "url": "",
-      "via": "",
+      "url": "https://www.statista.com/business/connect-mcp",
+      "via": "Claude",
       "about": "MCP integration for accessing Statista's statistics and market data within compatible AI assistants.",
       "unique": "Brings quantitative market data directly into flexible AI chat environments",
       "similar": "Wiley Scholar MCP",
@@ -1099,14 +1083,19 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "unique": "AI-driven patent landscape analysis and technology trend identification across 100+ countries",
+      "unique": "**Patsnap AI Agent** - Use PatsnapGPT, RAG, and CoT reasoning to deliver verified, cited answers and automate multi-step tasks such as novelty reporting and competitor monitoring\n**Expert AI search** - Combine semantic understanding with keyword and Boolean logic while giving users transparent, editable query control\n**Semantic patent search** - Use NLP and transformer-based embeddings to identify conceptually similar prior art, retrieve and rank up to 1,000 results by relevance\n**Hiro AI Assistant** - Provide conversational patent analysis, technical explanations, and instant reporting, including life sciences support\n**AI tagging in Workspace** - Classify and organize documents with AI-driven tagging that supports team collaboration and project consistency.",
       "similar": "CNKI AI",
       "coverage": "Patsnap's 150M+ global patents from 100+ countries.",
-      "limitations": "Focuses on patents rather than academic literature\nSubscription required",
+      "limitations": "**Subscription required ** – Require a paid Patsnap subscription, with AI features incurring additional credit-based costs\n**Expert review required** - Require human validation and not serve as the sole authority for high-stakes IP decisions",
       "screenshots": [],
-      "ai_role": "LLM synthesizes patent insights, identifies technology trends, and answers questions grounded in patent data.",
+      "ai_role": "Use a domain-trained model to interpret natural-language prompt, perform both keyword and semantic searches, retrieve and rank relevant technical documents, and generate precise, explainable answers with citations under user-approved guardrails.",
       "ai_roles": [
-        "role4c"
+        "role1",
+        "role2",
+        "role3",
+        "role4a",
+        "role4b",
+        "role5"
       ],
       "needs": [
         "find-lit",
@@ -1157,7 +1146,7 @@
       "similar": "",
       "limitations": "**Retrieval limit in AI summary** - Generate summaries using only up to the top 20 results\n**CAS-only content scope** - Rely exclusively on CAS content for retrieval and summary generation\n**Daily query limit** - Limit usage to 3 questions per day as of 2026-04",
       "screenshots": [],
-      "ai_role": "Use AI to interprete natural language queries for semantic retrieval and synthesize top relevent results using RAG.",
+      "ai_role": "Use AI to interpret natural language queries for semantic retrieval and synthesize top relevant results using RAG.",
       "ai_roles": [
         "role1",
         "role2",
@@ -1294,7 +1283,7 @@
       "abbr": "SC-MCP",
       "hkust": false,
       "viaLibrary": false,
-      "url": "",
+      "url": "https://scite.ai/mcp",
       "via": "Claude, ChatGPT",
       "about": "MCP integration for citation context analysis within Claude — showing how papers support, contrast, or mention findings.",
       "unique": "Allows custom AI agents to perform automated fact-checking using Scite's citation classification",
@@ -1307,7 +1296,8 @@
         "role5"
       ],
       "needs": [
-        "ai-synthesis"
+        "ai-synthesis",
+        "find-lit"
       ]
     },
     {

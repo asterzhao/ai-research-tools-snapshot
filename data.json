@@ -935,10 +935,10 @@
       "badgeText": "",
       "via": "",
       "about": "Statista offers a generative AI assistant as an add-on feature. It uses LLMs and Cohere semantic search to help users find information in Statista’s database of statistics, infographics, market reports, and topic pages. It also offers MCP server that lets AI agents programmatically search the Statista’s content (2025-11).",
-      "unique": "Specialized in extracting and summarizing quantitative market data rather than academic papers",
+      "unique": "**Grounded proprietary data search** - Ground all answers in Statista’s human-verified data rather than the open web.\n**AI-powered natural language search** - Use Claude, Cohere, and semantic search to answer plain-language queries.\n**Inline citations and source transparency** - Provide direct links to the underlying charts and reports for verification.\n**Structured and digestible outputs** - Return narrative summaries, top statistics tables, recommendations, and TL;DR overviews.\n**Clear separation of AI and source data** - Distinguish AI-generated summaries from original verified statistics.\n**Statista MCP** - Enable conversational exploration of Statista’s statistical content.",
       "similar": "IEEE Xplore AI Search (for domain-specific RAG)\nO'Reilly AI (for domain-specific RAG)",
       "coverage": "Covers quantitative business and market data from 22,500+ sources, including research firms, government agencies, industry associations, and company reports, across 170 industries and 150+ countries. It primarily delivers statistics, charts, and market reports rather than qualitative academic literature.",
-      "limitations": "Limited to Statista content\nSubscription required",
+      "limitations": "**Limited content scope** - Cover quantitative market and business data rather than academic or scientific literature.\n**Restricted source retrieval** - Return a maximum of 10 cited sources per query, which may be narrower than standard keyword search.\n**Non-deterministic outputs** - Produce varying results and cited sources for the same prompt across sessions.\n**No saved session history** - Do not retain prompts or history in institutional license sessions.\n**Language-dependent quality** - Perform best in English, with variable quality across other languages.",
       "screenshots": [],
       "ai_role": "LLM synthesizes answers based on retrieved statistical reports and data points.",
       "ai_roles": [
@@ -1015,12 +1015,15 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered research assistant built on CNKI, the largest Chinese academic literature database, that enable users to search, synthesize, and access insights from extensive Chinese-language academic resources through natural language queries.",
-      "unique": "AI synthesis grounded exclusively in verified Chinese academic publications across all disciplines",
+      "unique": "**Chinese-language academic discovery** - Enable AI-driven semantic search and concept-based retrieval across Chinese scholarly content.\n**AI-enhanced retrieval** - Upgrade keyword search with semantic retrieval, conceptual summaries, and knowledge graph support.\n**AI research assistant** - Provide Q&A-enhanced retrieval, topic-level Q&A, and full-database question answering.",
       "similar": "Scopus AI\nWoS Research Assistant",
-      "limitations": "Limited to Chinese-language content\nSubscription required",
+      "limitations": "**Primarily Chinese-language content** - Limit utility for researchers who do not work with Chinese sources.\n**Limited AI transparency** - Provide little public detail on specific AI features and underlying models.\n**Subscription required** - Additional cost required on top of existing CNKI subscription",
       "screenshots": [],
       "ai_role": "LLM synthesizes answers grounded in CNKI's vast Chinese academic corpus.",
       "ai_roles": [
+        "role2",
+        "role3",
+        "role4a",
         "role4c"
       ],
       "needs": [

@@ -431,9 +431,9 @@
       "hkust": false,
       "viaLibrary": true,
       "about": "Developed by Clarivate, an AI-powered tool built on the Web of Science Core Collection, that leverages its multidisciplinary citation database for literature review, topic exploration, and journal discovery through interactive multi-step workflows. Unlike WoS Smart Search, it does perform RAG to synthesize answers.",
-      "unique": "**High transparency** - displays the LLM-generated Boolean search query with a direct link to run it in the standard WoS interface\n**Knowledge graph integration** – leverages WoS's structured knowledge graph to expand queries with semantically related terms\n**Dual query modes** – offers “Summary Queries” for conceptual overviews and “Document Search Queries” for specific paper retrieval\n**Agentic AI guides** – interactive multi-step task guides for “literature review” and “topic exploration” that iterate with user needs\n**Grounded exclusively in WoS Core Collection** – all responses are derived from quality-vetted content\n**Unique visualizations** – generates interactive co-citation networks, topic maps, trend graphs, and co-author maps\n**Multilingual input and output** – accepts queries in multiple languages and returns answers in the query language",
+      "unique": "**High transparency** - Display the LLM-generated Boolean search query with a direct link to run it in the standard WoS interface\n**Knowledge graph integration** – Leverage WoS's structured knowledge graph to expand queries with semantically related terms\n**Dual query modes** – Offer “Summary Queries” for conceptual overviews and “Document Search Queries” for specific paper retrieval\n**Agentic AI guides** – Interactive multi-step task guides for “literature review” and “topic exploration” that iterate with user needs\n**Grounded exclusively in WoS Core Collection** – All responses are derived from quality-vetted content\n**Unique visualizations** – Generate interactive co-citation networks, topic maps, trend graphs, and co-author maps\n**Multilingual input and output** – Accept queries in multiple languages and return answers in the query language",
       "similar": "Primo Research Assistant (Boolean generation, lexical search and synthesize)\nScopus AI (RAG on top of a curated citation database)",
-      "limitations": "**Additional cost** – requires an additional cost beyond the base WoS subscription\n**Lexical search rather than semantic search**\n**Non-deterministic query generation** – the LLM-generated Boolean query can vary, leading to moderate reproducibility for the search strategy\n**Influence of embedding-based reranking** – the final order of results is influenced by a less interpretable reranking step\n**RAG limited to abstracts** – does not use full-text even when available",
+      "limitations": "**Additional cost** – Require an additional cost beyond the base WoS subscription\n**Lexical search rather than semantic search**\n**Non-deterministic query generation** – The LLM-generated Boolean query can vary, leading to moderate reproducibility for the search strategy\n**Influence of embedding-based reranking** – The final order of results is influenced by a less interpretable reranking step\n**RAG limited to abstracts** – Does not use full-text even when available",
       "ai_role": "Use an LLM to convert natural language questions into Boolean search and synthesizes across the top 8 retrieved abstracts to produce narrative answers",
       "ai_roles": [
         "role1",
@@ -481,10 +481,8 @@
       "badgeText": "",
       "via": "",
       "about": "Elsevier's largest abstract and citation database of peer-reviewed literature, now integrated with an AI query builder.",
-      "unique": "",
       "similar": "Web of Science\nEBSCOhost",
       "coverage": "Covers 29k+ peer-reviewed journals, conference proceedings, and book series across sciences, social sciences, arts, and humanities.",
-      "limitations": "",
       "screenshots": [],
       "ai_role": "Use AI query builder to formulate and refine Boolean queries from natural language input; no generative summary produced.",
       "ai_roles": [
@@ -512,9 +510,9 @@
       "badgeText": "",
       "via": "",
       "about": "Developed by Elsevier, an AI research tool that combines the Scopus bibliographic database with LLM to help researchers quickly discover, summarize, and navigate scholarly literature.\n\nNote: Starting Apr 2026, Scopus AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
-      "unique": "**Transparency** - displays query optimization steps and the generated Boolean query.\n**RAG Fusion technology** - combines hybrid search (LLM-generated Boolean + parallel vector search) with Reciprocal Rank Fusion to rerank results, improving recall and precision\n**Topic Summary and Expanded Summary** - produces structured summaries with references and confidence-in-relevance indicators\n**Foundational documents** - mines the full Scopus database to surface high-impact papers cited by papers used in summaries\n**Concept Map** - generates interactive visual maps from keywords in abstracts to show topic relationships.\n**Deep Research** - agentic AI feature that develops a detailed research plan, iteratively searches Scopus, and produces comprehensive downloadable reports",
+      "unique": "**Transparency** - Display query optimization steps and the generated Boolean query.\n**RAG Fusion technology** - Combine hybrid search (LLM-generated Boolean + parallel vector search) with Reciprocal Rank Fusion to rerank results, improving recall and precision\n**Topic Summary and Expanded Summary** - Produce structured summaries with references and confidence-in-relevance indicators\n**Foundational documents** - Mine the full Scopus database to surface high-impact papers cited by papers used in summaries\n**Concept Map** - Generate interactive visual maps from keywords in abstracts to show topic relationships.\n**Deep Research** - Agentic AI feature that develops a detailed research plan, iteratively searches Scopus, and produces comprehensive downloadable reports",
       "similar": "ScienceDirect AI (Elsevier product with full-text access but narrower corpus)\nLeapSpace (successor of ScienceDirect AI and Scopus AI)\nPrimo Research Assistant (hybrid search + multi-document RAG for library discovery)\nWeb of Science Research Assistant (RAG over a curated citation database)",
-      "limitations": "**Additional cost** – requires an additional cost beyond the base Scopus subscription\n**Abstract-only access** – works only from titles and abstracts\n**Limited transparency in final ranking** – while the Boolean query is shown, the final result order from RAG Fusion/vector reranking is harder to interpret or reproduce\n**Hallucination risk in RAG summaries** – susceptible to subtle misrepresentation of evidence despite strong guardrails\n**Retraction/correction awareness** – depends on Scopus metadata being updated; may not always flag retracted papers in generated summaries",
+      "limitations": "**Additional cost** – Require an additional cost beyond the base Scopus subscription\n**Abstract-only access** – Work only from titles and abstracts\n**Limited transparency in final ranking** – While the Boolean query is shown, the final result order from RAG Fusion/vector reranking is harder to interpret or reproduce\n**Hallucination risk in RAG summaries** – Susceptible to subtle misrepresentation of evidence despite strong guardrails\n**Retraction/correction awareness** – Depend on Scopus metadata being updated; may not always flag retracted papers in generated summaries",
       "screenshots": [],
       "ai_role": "Combines LLM-generated Boolean queries with parallel vector search to retrieve relevant content. It synthesizes insights across multiple abstracts to generate paragraph-length summaries and deep research reports.",
       "ai_roles": [
@@ -628,10 +626,8 @@
       "badgeText": "",
       "via": "",
       "about": "EBSCO's research platform that provides access to a vast collection of licensed databases, including peer-reviewed journals, e-books, and historical archives across diverse academic disciplines.",
-      "unique": "",
       "similar": "Web of Science\nScopus",
       "coverage": "Covers 11B+ items across academic journals, books, dissertations, conference papers, magazines, and newspapers from thousands of publishers across all academic disciplines, including medicine (MEDLINE), nursing (CINAHL), psychology (PsycINFO), education (ERIC), business (Business Source), literature, etc.",
-      "limitations": "",
       "screenshots": [],
       "ai_role": "",
       "ai_roles": [
@@ -661,7 +657,7 @@
       "unique": "**Search query transparency** - Let users see the exact Boolean string generated by the LLM through “Show refined query”\n**Conservative, complementary query expansion** - Generate shorter Boolean strings with fewer synonyms while deferring broader concept expansion to EBSCO’s pre-existing Unified Subject Index (USI)\n**Unified Subject Index (USI) synergy** - Work in sequence with EBSCO’s USI to automatically expand queries using linked controlled vocabularies and subject headings\n**Paired with AI Insights** - Handle query formulation while a companion feature provides fixed-button key insight summaries of individual full-text articles\n**Opt-in administrative configuration** - Allow library administrators to enable NLS as the default search mode, offer it as an optional toggle, or disable it entirely",
       "similar": "",
       "coverage": "Covers the full range of EBSCO's databases and EBSCO Discovery Service (EDS) index, which provides access to 11B+ items across academic journals, books, dissertations, conference papers, magazines, and newspapers from thousands of publishers across all academic disciplines, including medicine (MEDLINE), nursing (CINAHL), psychology (PsycINFO licensed), education (ERIC), business (Business Source), literature, etc.",
-      "limitations": "**Lexical search rather than semantic search**\nReturns search results only, no AI-generated summary\nQuality varies across databases\nSubscription coverage determines accessible content",
+      "limitations": "**No semantic retrieval** - Generate only a Boolean query for keyword execution, with final retrieval remaining purely lexical.\n**Limited incremental value** - Add only marginal improvement over EBSCO’s existing interface, especially in well-indexed subject areas.\n**Non-deterministic results** - Even with the NLS-generated Boolean string, repeated runs can return slightly different result sets.\n**No answer generation** - Provide only a ranked results list without any synthesized answer, summary, or explanation.",
       "screenshots": ["https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/EBSCO_NLS.png"],
       "ai_role": "LLM converts natural language queries to Boolean search queries and runs them through standard keyword search. It does not generate synthesized answers or summaries; “AI Insights” are based on individual article abstracts or metadata.",
       "ai_roles": [
@@ -719,7 +715,7 @@
       "about": "Developed by IEEE, a beta-stage overlay that adds GenAI capabilities to the IEEE Xplore corpus, searching IEEE full text, and returning AI-generated overviews with inline citations.",
       "unique": "**Curated STEM content** - Draw exclusively from IEEE and curated STEM sources.\n**Publication coverage** - Include IEEE publications and select non-IEEE STEM publishers through OpenAlex metadata enrichment.\n**AI-generated summaries** - Provide time-saving overviews of individual papers and topics.\n**In-context definitions** - Explain unfamiliar technical terms directly within the search interface.\n**In-platform annotations** - Enable researchers to annotate content without leaving the platform.",
       "similar": "Scopus AI\nPrimo Research Assistant\nO'Reilly AI (for domain-specific RAG)",
-      "limitations": "**STEM-focused coverage** - limit results mainly to IEEE and curated STEM content, with weaker coverage of humanities, social sciences, clinical medicine, grey literature, and non-indexed sources.\n**Search recall constraints** - return top 30 results rather than exhaustive Boolean matches\n**Beta-stage limitations** – newly added content in IEEE Xplore may not be indexed on AI search results.",
+      "limitations": "**STEM-focused coverage** - Limit results mainly to IEEE and curated STEM content, with weaker coverage of humanities, social sciences, clinical medicine, grey literature, and non-indexed sources.\n**Search recall constraints** - Return top 30 results rather than exhaustive Boolean matches\n**Beta-stage limitations** – Newly added content in IEEE Xplore may not be indexed on AI search results.",
       "screenshots": [],
       "ai_role": "Use LLM to understand natural-language queries, search for relevant IEEE full-text content and OpenAlex STEM metadata, and then generate a synthesized answer with inline citations from multiple sources.",
       "ai_roles": [
@@ -747,10 +743,8 @@
       "badgeText": "",
       "via": "",
       "about": "O’Reilly’s learning platform that provides access to over ebooks, video tutorials, and interactive sandboxes covering technology, business, and software development. ",
-      "unique": "Answers are grounded in authoritative technical manuals and programming guides",
-      "similar": "Statista AI (for domain-specific RAG)",
+      "similar": "",
       "coverage": "Indexes 70,000+ books, videos, online courses, and live training sessions primarily covering software development, data science, AI/ML, cloud, cybersecurity, UX design, and business technology, with content exclusively from O'Reilly Media's editorially curated library.",
-      "limitations": "Limited to O'Reilly content\nTechnology and business focus only\nInstitutional subscription required",
       "screenshots": [],
       "privacy": "",
       "policy_url": "https://www.oreilly.com/privacy.html",
@@ -770,11 +764,11 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "O’Reilly’s AI Answers - an AI-powered learning platform feature that use RAG to deliver responses grounded in O’Reilly’s database of technical books and videos. It also offer an MCP server that let AI agents programmatically search O’Reilly content.",
+      "about": "O’Reilly’s AI Answers feature uses RAG to deliver responses grounded in O’Reilly’s database of technical books and videos. It also offers an MCP server that lets AI agents programmatically search O’Reilly content.",
       "unique": "**“AI Answers”** - Provide answers using only books, videos, and courses within O’Reilly platform\n**Multilingual query support** - Accept questions in multi-language while returning answers in English\n**Official MCP server** - Provide programmatic access to O’Reilly content and metadata for AI tools, agents, and RAG pipelines directly from tools like Cursor and VS Code",
       "similar": "Statista AI (for domain-specific RAG)\nIEEE Xplore AI Search (for domain-specific RAG)",
       "coverage": "Indexes 70,000+ books, videos, online courses, and live training sessions primarily covering software development, data science, AI/ML, cloud, cybersecurity, UX design, and business technology, with content exclusively from O'Reilly Media's editorially curated library.",
-      "limitations": "**Content scope** - cover only O’Reilly-published material, with no access to peer-reviewed journals, conference papers, or academic databases.\n**Response coverage** - remain limited to O’Reilly’s catalog, so niche or cutting-edge research topics may be missing or outdated.\n**Institutional subscription required**",
+      "limitations": "**Content scope** - Cover only O’Reilly-published material, with no access to peer-reviewed journals, conference papers, or academic databases.\n**Response coverage** - Remain limited to O’Reilly’s catalog, so niche or cutting-edge research topics may be missing or outdated.\n**Institutional subscription required**",
       "screenshots": [],
       "ai_role": "RAG-based synthesis tool that retrieves, ranks, validates, and trims relevant content from technical book chapters and video transcripts to answer user questions.",
       "ai_roles": [
@@ -785,6 +779,28 @@
       ],
       "needs": [
         "technical",
+        "ai-synthesis"
+      ]
+    },
+    {
+      "id": "oreilly-mcp",
+      "contentRef": "oreilly",
+      "name": "O'Reilly MCP",
+      "cat": "mcp",
+      "abbr": "OR-MCP",
+      "free": false,
+      "hkust": false,
+      "via": "Cursor, Claude Code, VS Code",
+      "about": "O’Reilly’s MCP integration enables direct access to its personalized content search within existing LLMs and third-party tools such as Cursor, Claude Code, and VS Code.",
+      "unique": "**Workflow embedding** - Support learning in the flow of work by surfacing trusted learning resources, live events, and solution discovery directly inside development environments.\n**Custom AI support** - Allow teams building internal AI tools to match O’Reilly content to employee goals and personalized learning paths.\n**Road map** - Plan future capabilities such as chapter- and section-level search, conversational answers with deep links to sources, skill mapping, personalized skill plans, hands-on practice, and assessments.",
+      "similar": "Wiley Scholar Gateway MCP",
+      "limitations": "**Current limitations** - Restrict availability initially to O’Reilly enterprise customers, with broader release only planned for later.\n**Answering limitations** - Do not yet provide instant conversational answers with source-linked responses, which remain on the roadmap.",
+      "screenshots": [],
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
+      "ai_roles": [
+        "role5"
+      ],
+      "needs": [
         "ai-synthesis"
       ]
     },
@@ -811,7 +827,7 @@
       "ai_roles": [
         "role0"
       ],
-      "privacy": "",
+      "privacy": "JSTOR does not sell user data, nor does it share content or user data from its platform for the purposes of training third-party large language models (LLMs).",
       "policy_url": "https://www.ithaka.org/privacypolicy/",
       "needs": [
         "find-lit"
@@ -830,9 +846,9 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered assistant embedded directly on JSTOR's content pages that help users assess article relevance, discover related content, and ask natural-language questions about the material. Developed by ITHAKA and available free to JSTOR-participating institutions.",
-      "unique": "Improves relevancy without requiring exact keywords; adds prompts relating queries to document content",
+      "unique": "**‘Semantic Results’ tab** - Show a separate tab with up to 25 results ranked by meaning, alongside regular keyword search.\n**Single-item Q&A** - Let users ask free-form questions about the specific item they are viewing.\n**Book-level context** - Allow book chapter users to ask for answers using all available chapters of the same book on JSTOR as context.\n**Related discovery** - Suggest related content and recommended topics, with topic clicks launching new JSTOR searches.\n**Text selection tools** - Let users highlight passages to get a summary of the selection or find related JSTOR content.\n**Search enhancement** - Offer the tool as a search option beyond standard keyword search to support more conversational discovery.\n**Conversation export and citation** - Let users download conversation transcripts as PDF or HTML and cite either the tool or specific responses in MLA, Chicago, or APA.\n**User control** - Let institutions disable or re-enable the tool, and let individual users hide it with an on/off toggle.\n**Trust and governance** - Monitor quality through subject matter expert review, user feedback, and model evaluation, while stating that user data is not sold or used to train third-party LLMs.\n**No additional cost** - Offer the tool free to all participating JSTOR institutions.",
       "similar": "EBSCOhost NLS\nPrimo Research Assistant",
-      "limitations": "Archival focus with 'moving wall' for recent issues\nReturns search results only, no AI-generated summary\nLess STEM coverage",
+      "limitations": "**Scope limitations** - Limit answers mostly to the item being viewed, though some book chapters can use whole-book context.\n**Content limitations** - Exclude images, audio, video, and text-based primary sources for now.\n**Access limitations** - Require both a personal JSTOR account and access through a participating institution.\n**Top-25 result limit** - Show only the top 25 semantic results, which may miss other relevant content and weaken follow-up multi-document answers.\n**Model limitations** – Still use small models such as GPT-4o mini and GPT-4.1 nano, which may be less effective for complex synthesis or nuanced interpretation.",
       "screenshots": [],
       "ai_role": "Uses embeddings for semantic retrieval to improve relevancy ranking beyond keyword matching; no generative synthesis.",
       "ai_roles": [
@@ -959,9 +975,9 @@
       "url": "https://www.statista.com/business/connect-mcp",
       "via": "Claude",
       "about": "MCP integration for accessing Statista's statistics and market data within compatible AI assistants.",
-      "similar": "Wiley Scholar MCP",
+      "similar": "Wiley Scholar Gateway MCP",
       "screenshots": [],
-      "ai_role": "LLM orchestrates query formulation and synthesizes retrieved statistical data.",
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [
         "role5"
       ],
@@ -983,10 +999,8 @@
       "badgeText": "",
       "via": "",
       "about": "The largest Chinese academic database covering journals, dissertations, conference papers, newspapers, and yearbooks.",
-      "unique": "",
       "similar": "",
       "coverage": "Covers 380M+ documents, including journals, dissertations, conference papers, newspapers, and books from the 1990s to the present.",
-      "limitations": "",
       "screenshots": [],
       "ai_role": "",
       "ai_roles": [
@@ -1177,8 +1191,8 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "unique": "**Free & comprehensive biomedical coverage** - offer publicly funded, universally accessible biomedical literature at no cost\n**AI-enhanced search and ranking** - improve retrieval with Best Match, query suggestions, spell correction, and author disambiguation\n**ML-assisted indexing and term mapping** - apply automated MeSH indexing and Automatic Term Mapping to expand recall while preserve precision\n**PubMed MCP server** (2025-11) - allow LLM agents to run structured PubMed searches and access millions of PMC full-text articles",
-      "similar": "Medline\nWeb of Science Smart Search (retrieval-only, no synthesis)\nSemantic Scholar",
+      "unique": "**Free & comprehensive biomedical coverage** - Offer publicly funded, universally accessible biomedical literature at no cost\n**AI-enhanced search and ranking** - Improve retrieval with Best Match, query suggestions, spell correction, and author disambiguation\n**ML-assisted indexing and term mapping** - Apply automated MeSH indexing and Automatic Term Mapping to expand recall while preserve precision\n**PubMed MCP server** (2025-11) - Allow LLM agents to run structured PubMed searches and access millions of PMC full-text articles",
+      "similar": "Medline\nWeb of Science - Smart Search (retrieval-only, no synthesis)\nSemantic Scholar",
       "limitations": "**Biomedical focus only**\n**No AI summaries** – Remain a retrieval and indexing platform rather than a content-generation tool.\n**No semantic search** - Rely on lexical search.\n**MCP access limit** – Full-text access via MCP is limited to open access PMC articles and require PMID-based retrieval rather than natural language full-text search.",
       "screenshots": [],
       "ai_role": "Use AI to expand queries using MeSH concepts and biomedical entity recognition; no generative synthesis.",
@@ -1208,6 +1222,7 @@
       "about": "The National Library of Medicine’s primary biomedical literature database and the gold standard for biomedical searching, combining controlled MeSH vocabulary and systematic review filters with AI- and machine-learning–enhanced retrieval and indexing. Also offer a PubMed MCP server for LLM agents such as Claude to search, check MeSH headings, and retrieve PMC full text.",
       "similar": "Wiley Scholar Gateway MCP\nScite MCP",
       "screenshots": [],
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [
         "role5"
       ],
@@ -1230,10 +1245,10 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered research platform that answers questions with citation-grounded responses from scholarly literature and classifies citations as supporting, contrasting, or mentioning.",
-      "unique": "**Citation statements** - ground AI responses in article full text for easy verification\n**Smart Citations** - classify citations as supporting, contrasting, or mentioning, with full in-text snippets rather than simple counts\n**Pre-filtering** - choose models, set the number of publications reviewed, filter by year, publication type, journal, etc.\n**Search transparency** - show the full search strategy and all consulted sources\n**Output formats** - support both chat and table/literature matrix views\n**MCP server** (Feb 2026) - enable direct integration with Claude, ChatGPT, Copilot, and other MCP-compatible AI tool",
+      "unique": "**Citation statements** - Ground AI responses in article full text for easy verification\n**Smart Citations** - Classify citations as supporting, contrasting, or mentioning, with full in-text snippets rather than simple counts\n**Pre-filtering** - Choose models, set the number of publications reviewed, filter by year, publication type, journal, etc.\n**Search transparency** - Show the full search strategy and all consulted sources\n**Output formats** - Support both chat and table/literature matrix views\n**MCP server** (Feb 2026) - Enable direct integration with Claude, ChatGPT, Copilot, and other MCP-compatible AI tool",
       "similar": "Consensus (literature search + summary)\nElicit (literature search + summary)\nSciSpace (literature search + summary)",
       "coverage": "Covers 280M+ papers, books, preprints, etc. across all disciplines and includes 1B+ Smart Citation statements extracted from full-text articles. Its content comes from both direct publisher indexing agreements and major open access sources.",
-      "limitations": "**Search** - rely on keyword-based Boolean search rather than semantic search\n**Model variability** - produce different, non-deterministic results across models\n**Summary scope** - draw summaries from the top 10–20 results (depending on settings and model choice), not all consulted sources\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Pricing** - requires a paid subscription for full functionality",
+      "limitations": "**Search** - Rely on keyword-based Boolean search rather than semantic search\n**Non-deterministic results** - Produce different summaries and result sets across models and repeated runs\n**Summary scope** - Draw summaries from the top 10–20 results (depending on settings and model choice), not all consulted sources\n**Citation faithfulness** - Cite real sources, but generated claims still require verification\n**Pricing** - Require a paid subscription for full functionality",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_homepage.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_prefitering.png",
@@ -1268,7 +1283,7 @@
       "about": "Scite's MCP integration for citation context analysis within Claude — showing how papers support, contrast, or mention findings.",
       "similar": "PubMed MCP",
       "screenshots": [],
-      "ai_role": "LLM orchestrates retrieval of citation statements to validate claims dynamically.",
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [
         "role5"
       ],
@@ -1291,10 +1306,10 @@
       "badgeText": "",
       "via": "",
       "about": "An AI research assistant designed to automate and accelerate scientific literature review and systematic review workflows.",
-      "unique": "**Query suggestions** – evaluate search queries and suggest improvements\n**Hybrid search** - combine keyword and semantic search using SPLADE\n**Literature extraction table** - add custom columns (e.g. methodology) to extract and compare across papers\n**Research Reports** - generate automated research overviews grounded in systematic review principles\n**Systematic Review** (Pro tier) - provide a guided, automated workflow that mirrors systematic review methodology; support strict inclusion and exclusion criteria (2025-12); Boolean keyword search (2026-01); for Pro users, allow up to 5,000 papers per review and 1,000 results per search (2026-02)\n**Research Agents** (Pro tier) - powered by Claude-Opus-4.6, automate multi-step workflows for competitive landscape analysis, broad topic exploration, and research landscape mapping (2025-12)\n**Browser extension** - enable automatic full-text PDF download through library subscriptions (2025-10)\n**API access** - programmatic access to Elicit content, for Pro and Team users (2026-03)",
+      "unique": "**Query suggestions** – Evaluate search queries and suggest improvements\n**Hybrid search** - Combine keyword and semantic search using SPLADE\n**Literature extraction table** - Add custom columns (e.g. methodology) to extract and compare across papers\n**Research Reports** - Generate automated research overviews grounded in systematic review principles\n**Systematic Review** (Pro tier) - Provide a guided, automated workflow that mirrors systematic review methodology; support strict inclusion and exclusion criteria (2025-12); Boolean keyword search (2026-01); for Pro users, allow up to 5,000 papers per review and 1,000 results per search (2026-02)\n**Research Agents** (Pro tier) - Powered by Claude-Opus-4.6, automate multi-step workflows for competitive landscape analysis, broad topic exploration, and research landscape mapping (2025-12)\n**Browser extension** - Enable automatic full-text PDF download through library subscriptions (2025-10)\n**API access** - Programmatic access to Elicit content, for Pro and Team users (2026-03)",
       "similar": "SciSpace (literature extraction table, systematic review)\nScite Assistant (literature search + summary)\nConsensus (literature search + summary)\nRayyan (systematic review screening)",
       "coverage": "Covers 138M+ academic papers across all disciplines and 545,000+ clinical trials. Draws from Semantic Scholar, PubMed, and OpenAlex, with strong open access full-text coverage and regular updates.",
-      "limitations": "**Free tier limits** - no data export, max. 2 custom columns, and 2 monthly reports\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones \n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Non-deterministic results** - produce different paper sets and summaries across repeated runs of the same query\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required",
+      "limitations": "**Free tier limits** - No data export, max. 2 custom columns, and 2 monthly reports\n**Full-text access limits** - Rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Retrieval bias** - Semantic search without citation weighting tend to favor newer papers over seminal older ones \n**Citation faithfulness** - Cite real sources, but generated claims still require verification\n**Non-deterministic results** - Produce different paper sets and summaries across repeated runs of the same query\n**Extraction reliability** - Contain errors in AI-generated extractions and summaries, so verification still required",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Find_papers_0.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Elicit_Find_papers_1.png",
@@ -1309,7 +1324,7 @@
         "role4b",
         "role4c"
       ],
-      "privacy": "Usage data will be collected for “business purposes”. No explicit opt-out for AI training.",
+      "privacy": "Usage data will be collected for business purposes. No explicit opt-out for AI training.",
       "policy_url": "https://elicit.com/operations/privacy",
       "needs": [
         "find-lit",
@@ -1349,10 +1364,10 @@
       "badgeText": "Trial",
       "via": "",
       "about": "An AI-powered academic search engine for evidence-based research that helps users find and assess scientific literature.",
-      "unique": "**Consensus Meter** - unique visual feature to categorize retrieved papers into Yes/No/Possibly/Mixed to show the distribution of scientific consensus for a yes/no question\n**Study Snapshot** – a snapshot of study, extracting population, methods/study design, sample size, outcomes, and results for each paper\n**Study classification** – label search results by study design, journal reputation, etc.\n**Medical mode** - allow search within top medical journals and clinical guidelines for evidence-based medicine queries\n**Pre- & post-filtering** - offer granular filters for study design, sample size, field, country, journal quartile, citation count, publication year, and preprint/OA exclusion\n**LibKey integration** - provide direct access to full-text articles through library subscriptions for verification\n**Deep Search** - show a transparent, PRISMA-like review flow by screening around 1,000 papers, selecting the top 50, and displaying step-by-step counts of identified, screened, and included studies\n**Scholar Agent** - powered by GPT-5, enable multi-step iterative research through specialized sub-agents (2025-10)\n**MCP server** (Mar 2026) - enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool\n**Integration with bibliographic reference tools** - Import Zotero collections and papers via DOI/RIS/BibTeX, generate bibliographies in any citation style, and export to LaTeX (2026-04)",
+      "unique": "**Consensus Meter** - Unique visual feature to categorize retrieved papers into Yes/No/Possibly/Mixed to show the distribution of scientific consensus for a yes/no question\n**Study Snapshot** – A snapshot of study, extracting population, methods/study design, sample size, outcomes, and results for each paper\n**Study classification** – Label search results by study design, journal reputation, etc.\n**Medical mode** - Allow search within top medical journals and clinical guidelines for evidence-based medicine queries\n**Pre- & post-filtering** - Offer granular filters for study design, sample size, field, country, journal quartile, citation count, publication year, and preprint/OA exclusion\n**LibKey integration** - Provide direct access to full-text articles through library subscriptions for verification\n**Deep Search** - Show a transparent, PRISMA-like review flow by screening around 1,000 papers, selecting the top 50, and displaying step-by-step counts of identified, screened, and included studies\n**Scholar Agent** - Powered by GPT-5, enable multi-step iterative research through specialized sub-agents (2025-10)\n**MCP server** (Mar 2026) - Enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool\n**Integration with bibliographic reference tools** - Import Zotero collections and papers via DOI/RIS/BibTeX, generate bibliographies in any citation style, and export to LaTeX (2026-04)",
       "similar": "Elicit (literature search, systematic review)\nSciSpace (literature search, systematic review)\nScite Assistant (literature search + summary)\nUndermind (agentic deep search)",
       "coverage": "Covers 220M+ papers and preprints across disciplines, primarily from Semantic Scholar and OpenAlex, including ~8M medical papers from the top 1,000 journals; Include abstracts and full text from open access articles, plus selective full text from partnered publishers.",
-      "limitations": "**Free tier limits** - limited Pro search and 3 Deep Search per month; Quick select up to 10 papers only; Pro top 20 and Deep Search top 50\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**STEM-centric design** - make some features less suitable for qualitative and non-biomedical disciplines\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Consensus Meter simplification** - rely on vote-counting that weighs all papers equally, which can misrepresent scientific consensus and weaken evidence synthesis\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Deep Search not fully reproducible** – not meet formal systematic review standard, fit better for scoping reviews",
+      "limitations": "**Free tier limits** - Limited Pro search and 3 Deep Search per month; Quick select up to 10 papers only; Pro top 20 and Deep Search top 50\n**Full-text access limits** - Rely on abstracts for most paywalled papers, which can reduce extraction quality\n**STEM-centric design** - Make some features less suitable for qualitative and non-biomedical disciplines\n**Retrieval bias** - Semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Consensus Meter simplification** - Rely on vote-counting that weighs all papers equally, which can misrepresent scientific consensus and weaken evidence synthesis\n**Extraction reliability** - Contain errors in AI-generated extractions and summaries, so verification still required\n**Citation faithfulness** - Cite real sources, but generated claims still require verification\n**Non-deterministic deep-search outputs** – Produce different screening and synthesis results across runs, so it does not meet formal systematic review reproducibility standards and is better suited to scoping reviews",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Consensus_ProSearch.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Consensus_DeepSearch_01.png",
@@ -1399,14 +1414,14 @@
       "id": "consensus-mcp",
       "contentRef": "consensus",
       "name": "Consensus - MCP",
-      "cat": "deepresearch",
+      "cat": "mcp",
       "abbr": "CS-MCP",
       "free": true,
       "url": "https://consensus.app/home/mcp/",
       "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
       "similar": "Scite MCP\nWiley Scholar Gateway MCP\nPubMed MCP",
       "screenshots": [],
-      "ai_role": "Enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool",
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [
         "role5"
       ],
@@ -1428,10 +1443,10 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered research assistant designed to streamline literature discovery, reading, data analysis, writing, and citation generation to accelerate the research workflow.",
-      "unique": "**Hybrid search** - combine keyword and semantic search\n**Literature extraction table** - add custom columns (e.g. methodology) to extract and compare across papers\n**Research Agent** - enable flexible agentic workflows through integration with 150+ tools and databases, including PubMed, Google Scholar, and arXiv (2025-07)\n**Chat with PDF** - explain text, equations, tables, and decode figures, charts and diagrams\n**Deep Review** (Pro tier) - automate literature reviews by consulting 1000+ papers and generate step-by-step review reports\n**AI writing suite** - support manuscript drafting with an AI writer, paraphraser, citation generator, and AI detection",
+      "unique": "**Hybrid search** - Combine keyword and semantic search\n**Literature extraction table** - Add custom columns (e.g. methodology) to extract and compare across papers\n**Research Agent** - Enable flexible agentic workflows through integration with 150+ tools and databases, including PubMed, Google Scholar, and arXiv (2025-07)\n**Chat with PDF** - Explain text, equations, tables, and decode figures, charts and diagrams\n**Deep Review** (Pro tier) - Automate literature reviews by consulting 1000+ papers and generate step-by-step review reports\n**AI writing suite** - Support manuscript drafting with an AI writer, paraphraser, citation generator, and AI detection",
       "similar": "Elicit (literature extraction table, systematic review)\nScite Assistant (literature search + summary)\nConsensus (literature search + summary)\nUndermind (agentic deep search)",
       "coverage": "Covers 280M+ academic papers across all disciplines. Includes abstracts from Semantic Scholar, OpenAlex, Google Scholar, and 50M+ open access full-text articles.",
-      "limitations": "**Free tier limits** - restrict usage to 100 monthly credits; no Deep Review or data export; consult 20 papers by default and summarize only the top 5 results\n**Full-text access limits** - rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Non-deterministic Results** - produce different paper rankings and summaries across repeated runs of the same query\n**Retrieval bias** - semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Extraction reliability** - contain errors in AI-generated extractions and summaries, so verification still required",
+      "limitations": "**Free tier limits** - Restrict usage to 100 monthly credits; no Deep Review or data export; consult 20 papers by default and summarize only the top 5 results\n**Full-text access limits** - Rely on abstracts for most paywalled papers, which can reduce extraction quality\n**Non-deterministic results** - Produce different paper rankings and summaries across repeated runs of the same query\n**Retrieval bias** - Semantic search without citation weighting tend to favor newer papers over seminal older ones\n**Citation faithfulness** - Cite real sources, but generated claims still require verification\n**Extraction reliability** - Contain errors in AI-generated extractions and summaries, so verification still required",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_homepage.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_agent_01.png",
@@ -1460,7 +1475,7 @@
       "abbr": "SS-DR",
       "free": false,
       "about": "SciSpace's 'Deep Review' mode performing iterative deep search and AI analysis to produce comprehensive literature review reports.",
-      "similar": "Elicit Research Report\nConsensus Deep Search",
+      "similar": "Elicit - Systematic Review\nConsensus - Deep Search",
       "screenshots": [],
       "needs": [
         "deep-research"
@@ -1506,7 +1521,7 @@
       "unique": "**Iterative multi-step search** - Decompose queries into sub-criteria, run reformulations across indices, and follow forward and backward citations\n**LLM-based relevance judgment** - Evaluate each candidate paper against semantic sub-criteria and provide a short rationale for its ranking\n**Full transparency** - Display every step of the search process, including query analysis, workflows, sub-criteria, and relevance judgments\n**Deep Search mode** - Offer a fast mode for quick results and a work-harder mode for more exhaustive reformulation and citation tracking\n**Evidence-first pipeline** - Focus on finding supporting evidence before writing the answer",
       "similar": "Undermind (iterative deep search, agentic approach)\nPaperQA2 (iterative deep search, agentic approach)\nElicit – Research Report/Systematic Review (systematic review-oriented deep search with extraction tables)\nSemantic Scholar (underlying data source with a simpler search interface)",
       "coverage": "Covers 108M+ abstracts and 12M+ open access full-text papers from Semantic Scholar, with strong coverage in computer science, medicine, biology, and other arXiv /OA-heavy fields. It supports full-text search for open access papers and abstract-level search across the broader Semantic Scholar corpus.",
-      "limitations": "**Full-text search limit** - limit full-text search to open-access papers only\n**Query interpretation** - perform weakly for queries about author, venue, year, or institutional affiliation\n**Workflow flexibility** - rely on rigid predefined workflows and limit conversational multi-turn interaction\n**Response time** - take 2-3 minutes in “work harder” mode\n**Proprietary LLM dependency** - rely on closed-source proprietary models (e.g. Claude-3.7) in production, while allow model substitution in the open-source code",
+      "limitations": "**Full-text search limit** - Limit full-text search to open-access papers only\n**Query interpretation** - Perform weakly for queries about author, venue, year, or institutional affiliation\n**Workflow flexibility** - Rely on rigid predefined workflows and limit conversational multi-turn interaction\n**Response time** - Take 2-3 minutes in “work harder” mode\n**Proprietary LLM dependency** - Rely on closed-source proprietary models (e.g. Claude-3.7) in production, while allow model substitution in the open-source code",
       "screenshots": [],
       "ai_role": "**Find papers** uses LLMs extensively for query intent parsing, query reformulation, relevance judgment, and ranking, with its primary output being a ranked list of papers with rationales\n**Report generation** involves quote extraction, answer outlining and section clustering with relevant quotes, and section-by-section report generation with inline citations",
       "ai_roles": [
@@ -1549,10 +1564,10 @@
       "badgeText": "",
       "via": "",
       "about": "An AI-powered agentic research tool designed to automate and accelerate expert-level scientific literature search and review workflows.",
-      "unique": "**Clarifying query** - ask follow-up questions before search to refine ambiguous research topics\n**Iterative / agentic search** – conduct multiple-step searches, adapt strategy based on previously retrieved results\n**Citation graph traversal** - follow forward and backward citation trails to uncover papers beyond keyword or semantic search\n**High recall** - retrieve 150-200 papers for comprehensive coverage\n**Timeline & Categories** - organize results into chronological and thematic sections\n**Topic Match score** - help users assess result completeness by estimating the total no. of relevant papers on a topic\n**Ask Expert** - answer follow-up questions across all retrieved papers\n**Smart alerts** - monitor new publications and send updates",
+      "unique": "**Clarifying query** - Ask follow-up questions before search to refine ambiguous research topics\n**Iterative / agentic search** – Conduct multiple-step searches, adapt strategy based on previously retrieved results\n**Citation graph traversal** - Follow forward and backward citation trails to uncover papers beyond keyword or semantic search\n**High recall** - Retrieve 150-200 papers for comprehensive coverage\n**Timeline & Categories** - Organize results into chronological and thematic sections\n**Topic Match score** - Help users assess result completeness by estimating the total no. of relevant papers on a topic\n**Ask Expert** - Answer follow-up questions across all retrieved papers\n**Smart alerts** - Monitor new publications and send updates",
       "similar": "Ai2 Asta – Find Papers (iterative, exhaustive search)\nElicit (deep research)\nSciSpace (deep research)\nConsensus (deep research)",
       "coverage": "Search Semantic Scholar in real time, a database of 225M+ academic papers from PubMed, arXiv, bioRxiv, and many other sources across disciplines. It searches titles and abstracts for most papers and can analyze the full text of open-access articles available in Semantic Scholar.",
-      "limitations": "**Free tier limits** - limited searches (5 per month), limited results shown/summaries; analyze abstracts, not full texts\n**Search speed** – take 3-8+ minutes per search, making it less suitable for fast exploratory searches\n**Database coverage** - rely entirely on Semantic Scholar, with no access to content outside its index, including paywalled full texts\n**Transparency** - provide little visibility into which queries it run, which citations it follow, or why it select certain papers\n**Reproducibility** - prevent exact replication of search steps, limiting use in formal systematic reviews\n**Citation bias** - favor highly cited and seminal papers, which may underrepresent niche or very recent literature",
+      "limitations": "**Free tier limits** - Limited searches (5 per month), limited results shown/summaries; analyze abstracts, not full texts\n**Search speed** – Take 3-8+ minutes per search, making it less suitable for fast exploratory searches\n**Database coverage** - Rely entirely on Semantic Scholar, with no access to content outside its index, including paywalled full texts\n**Transparency** - Provide little visibility into which queries it run, which citations it follow, or why it select certain papers\n**Reproducibility** - Prevent exact replication of search steps, limiting use in formal systematic reviews\n**Citation bias** - Favor highly cited and seminal papers, which may underrepresent niche or very recent literature",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_search.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Undermind_results.png",
@@ -1591,7 +1606,7 @@
       "unique": "**Open-source and API access** - Provide a fully open-source PaperQA2 library with API support, compatibility with various LLMs, and support for custom corpora.\n**Agentic workflow** - Use an agent LLM to manage tools, iteratively expand queries, search for papers, and gather evidence until a complete answer is formed\n**Multiple task modes** - Support question answering (Crow), precedent search (Owl), deep topic synthesis (Falcon), and chemistry-specific workflows (Phoenix).\n**Contextual summarization** - Summarize and rate retrieved text based on the query before the final prompt to improve relevance and accuracy\n**Citation traversal** - Find more relevant paper through citation chaining\n**Retraction and metadata checks** - Check for retracted papers and automatically pull metadata like citation counts and journal quality from Crossref and Semantic Scholar\n**Multimodal support** - Understand tables, figures, equations, and non-English scientific content\n**Local repository search** - Include built-in full-text search for personal PDF and text file collections",
       "similar": "Undermind (iterative search)\nAi2 Asta - Find Papers",
       "coverage": "Covers ~38M papers on PubMed, 500k+ clinical trials, and open access papers from the Semantic Scholar/S2ORC corpus (which indexes 200M+ papers), with a primary disciplinary focus on biology and biomedical sciences.",
-      "limitations": "**Self-hosted deployment** - require technical setup to install and run\n**Open-access coverage bias** - focus mainly on PubMed and open-access papers, which can miss important paywalled literature\n**High compute cost** - use more API calls and time than standard RAG systems because of RCS and agent-based tool use",
+      "limitations": "**Self-hosted deployment** - Require technical setup to install and run\n**Open-access coverage bias** - Focus mainly on PubMed and open-access papers, which can miss important paywalled literature\n**High compute cost** - Use more API calls and time than standard RAG systems because of RCS and agent-based tool use",
       "screenshots": [],
       "ai_role": "Use an agent LLM to manage tools, iteratively expand queries, search for papers, and gather evidence until a complete answer is formed.",
       "ai_roles": [
@@ -1610,7 +1625,7 @@
     },
     {
       "id": "wiley-mcp",
-      "name": "Wiley AI Scholar Gateway",
+      "name": "Wiley Scholar Gateway MCP",
       "cat": "mcp",
       "abbr": "WL-MCP",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wiley_logo.svg/330px-Wiley_logo.svg.png",
@@ -1622,12 +1637,12 @@
       "badgeText": "",
       "via": "Claude, Le Chat",
       "about": "Developed by Wiley, an AI-native research intelligence platform that provides a single Model Context Protocol (MCP) endpoint, connecting Wiley’s peer-reviewed scholarly content directly into general AI tools such as Claude, Mistral AI's Le Chat.",
-      "unique": "Enables AI to pilot-test and refine Boolean strategies directly against publisher infrastructure",
-      "similar": "PubMed MCP",
+      "unique": "**First publisher MCP** - First major academic publishers to launch an official MCP server for AI agent access\n**Semantic search with RAG chunks** - Split full-text content into chunks, store them as embeddings, and search them using similarity matching with reranking\n**Citation integrity preservation** - Keep citation metadata, DOI links, peer-review status, and method context when returning content to AI agents\n**JSON-transparent responses** - Show the full JSON for each Scholar Gateway tool call, giving visibility into retrieved content and metadata\n**Multi-platform interoperability** - Integrate with Claude Pro and Mistral Le Chat\n**Publisher-controlled distribution** - Let Wiley and partner publishers keep full control of content while AI tools access it through MCP queries",
+      "similar": "PubMed MCP\nScite MCP",
       "coverage": "Covers 3M+ peer-reviewed articles from more than 1,300 Wiley journals, with disciplinary coverage spanning sciences, healthcare, business, law, and humanities. Future expansion is planned to include additional publisher partners (Sage, ASM, and others).",
-      "limitations": "Requires Claude Pro or Le Chat\nFull-text may depend on subscription",
+      "limitations": "**Limited content coverage** - Cover 3M+ articles from 1,300 Wiley journals, with expansion to other publishers still in progress.\n**Chunk-only retrieval** - Provide only text chunks rather than full-text articles, unlike PubMed’s MCP server.\n**No keyword search** - Use pure semantic similarity without BM25/keyword or hybrid search support yet.",
       "screenshots": [],
-      "ai_role": "Acts as a content access layer; the connecting LLM handles query formulation and synthesis.",
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [
         "role5"
       ],
@@ -1655,7 +1670,6 @@
       "unique": "**TL;DR** - Provide one-sentence summaries of millions of papers, helping users scan search results quickly\n**Citation intent and influence classification** - Distinguishes between 'highly influential' citations and those used for background or methodology, and show where it appears in the paper\n**Smart ranking** - Use SPECTER/SPECTER2 embeddings trained on citation networks to group related papers, helping the system find conceptually similar research from titles and abstracts even when keywords differ.\n**Semantic Reader** - Offer an augmented reading interface to read arXiv papers with citation previews, key highlights, and personalized citation suggestions\n**Research Feeds** - Learn what papers users care about and recommend new research to help them stay current\n**Open API** - Give developers access to paper search, author matching, citation links, related-paper data, and summary fields",
       "similar": "Google Scholar\nOpenAlex",
       "coverage": "Indexes 233M+ papers from all fields of science, with sources including PubMed, arXiv, CORE, CrossRef, IEEE, ACM, and direct publisher partnerships, providing full-text for open access papers via Semantic Scholar S2ORC corpus. (Note: Abstract coverage for closed-access Elsevier and SpringerNature papers has been significantly reduced since late 2024)",
-      "limitations": "Coverage gaps in some humanities and non-English publications\nNo full-text access — links to publisher sources",
       "screenshots": [],
       "ai_role": "Use AI to organize metadata, classify citations, and generate paper TL;DR summaries. It also powers semantic discovery in select features, while main search remains primarily keyword-based with reranking.",
       "ai_roles": [
@@ -1746,8 +1760,8 @@
       "about": "Developed by Google, a multimodal AI platform designed to enhance productivity through advanced reasoning, coding, and data analysis. Currently, the Enterprise version is available on trial for HKUST staff.",
       "unique": "**Largest context window** - Utilize a 1M token context window to synthesize extremely large evidence sets in one pass.\n**Google Workspace integration** - Access Gmail, Drive, Docs, Sheets, Slides, PDFs, and Google Chat to incorporate personal or institutional knowledge with public web research.\n**PDF and image upload** - Allow users to upload proprietary documents and combine them with web-sourced evidence.",
       "similar": "ChatGPT\nClaude",
-      "coverage": "General-purpose AI with web access. No direct academic database integration.",
-      "limitations": "**Requires enterprise licensing**\n**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
+      "coverage": "General-purpose AI with web access. No dedicated scholarly index.",
+      "limitations": "**Requires enterprise licensing**\n**No dedicated scholarly index** - Relies on the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
       "screenshots": [],
       "ai_role": "LLM with web browsing capabilities for general synthesis. Allow integration with MCP-compatible AI tools.",
       "ai_roles": [
@@ -1770,11 +1784,11 @@
       "abbr": "GE-DR",
       "about": "Google’s autonomous AI research agent, part of the Gemini ecosystem, that conducts multi-step, iterative research across hundreds of web sources and synthesizes findings into comprehensive reports with structured sections and citations. Currently, the Enterprise version (including Deep Research) is available on trial for HKUST staff.",
       "unique": "**Autonomous multi-step iterative research** - Conduct a continuous plan-search-browse-synthesize-refine loop across hundreds of web sources, show live progress, and complete complex research in 5-15 minutes.\n**Interactive Research Plan** - Present a proposed research strategy before execution, allowing users to review, add, remove, or modify the plan.\n**Largest context window** - Utilize a 1M token context window to synthesize extremely large evidence sets in one pass.\n**Google Workspace integration** - Access Gmail, Drive, Docs, Sheets, Slides, PDFs, and Google Chat to incorporate personal or institutional knowledge with public web research.\n**PDF and image upload** - Allow users to upload proprietary documents and combine them with web-sourced evidence.",
-      "similar": "OpenAI Deep Research\nPerplexity",
+      "similar": "ChatGPT Deep Research\nPerplexity",
       "coverage": "Searches the open web via Google Search, focusing on publicly accessible web pages, news sites, blogs, open-access repositories, Wikipedia, and official institutional websites, with additional integration for user's Gmail, Drive, Docs, and Google Chat via Workspace.",
-      "limitations": "Not directly accessible in Hong Kong\nSources from open web, not curated academic databases",
+      "limitations": "**Paywalled content excluded** - Research is limited to open web and open-access sources.\n**Hallucination** - Risk making up citations, misattributing sources.\n**Non-deterministic outputs** - Produce different results across runs because web content and search paths change.\n**Free tier limited** – Subscription required for more meaningful use.\n**Source quality variance** - Pull from uneven web sources, including blogs, marketing pages, and sources that are difficult to constrain to academic content only.",
       "screenshots": [],
-      "ai_role": "Generative LLM performing iterative sub-query generation and synthesis.",
+      "ai_role": "General-purpose LLM performing iterative sub-query generation and synthesis.",
       "ai_roles": [
         "role4c"
       ],
@@ -1799,7 +1813,7 @@
       "unique": "**User-uploaded documents for questions** – Allow users to upload various types of content (e.g. PDFs, text files, audio files, web pages, YouTube links), to build a custom knowledge base for questions and answers\n**Multi-document summaries** – Provide direct answers with citations by synthesizing information from multiple sources\n**Various output generation** – Can generate various types of outputs (e.g. FAQs, study guides, timelines, podcast-style audio, video summaries)\n**High source faithfulness** – Adhere strictly to the provided sources and avoids unsupported assumptions or hallucinations",
       "similar": "",
       "coverage": "",
-      "limitations": "**Limited to provided content** – Mainly works with user provided materials. It does not actively search academic databases or the wider web unless providing external links as sources.\n**May oversimplify complex papers** – can struggle with highly technical or complex academic texts, often giving broader, more general explanations instead of deep analysis.",
+      "limitations": "**Limited to provided content** – Mainly works with user provided materials. It does not actively search academic databases or the wider web unless providing external links as sources.\n**May oversimplify complex papers** – Can struggle with highly technical or complex academic texts, often giving broader, more general explanations instead of deep analysis.",
       "screenshots": [],
       "ai_role": "Query individual documents for explanations of content, or synthesizing insights across multiple sources into coherent, cited outputs",
       "ai_roles": [
@@ -1828,10 +1842,10 @@
       "about": "Developed by OpenAI, a general-purpose AI assistant supporting text, vision, code, and advanced data analysis.",
       "unique": "**Broad multimodal capabilities** - Support vision, data analysis through Code Interpreter, and file upload in one workflow.\n**MCP orchestration** - Connect to and intelligently chain multiple academic MCP servers, enabling highly composable research workflows.",
       "similar": "Claude\nGemini\nGrok",
-      "coverage": "General-purpose AI with web access. No direct academic database integration.",
-      "limitations": "**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.\n**No direct access in Hong Kong**",
+      "coverage": "General-purpose AI with web access. No dedicated scholarly index.",
+      "limitations": "**No dedicated scholarly index** - Relies on the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.\n**No direct access in Hong Kong**",
       "screenshots": [],
-      "ai_role": "Generative LLM for reasoning, writing, coding, and synthesis — no direct academic database retrieval.",
+      "ai_role": "Generative LLM for reasoning, writing, coding, and synthesis, with no dedicated scholarly index or built-in academic database retrieval.",
       "ai_roles": [
         "role1",
         "role2",
@@ -1849,7 +1863,7 @@
     {
       "id": "chatgpt-dr",
       "contentRef": "chatgpt",
-      "name": "OpenAI Deep Research",
+      "name": "ChatGPT Deep Research",
       "cat": "webdeepresearch",
       "abbr": "GPT-DR",
       "free": false,
@@ -1858,7 +1872,7 @@
       "unique": "**Comprehensive multi-source research** - Search, analyze, and combine information from the web, uploaded files, connected apps, and MCP servers into a cited report\n**Source control and composability** - Let users choose trusted sources, uploaded documents, and connected tools while combining MCP-compatible sources for more flexible research workflows\n**Research-oriented reasoning and analysis** - Support multi-step research tasks, deeper analysis, and optional Code Interpreter in API workflows",
       "similar": "Gemini Deep Research\nPerplexity",
       "coverage": "Searches the open web in real-time, including academic repositories (PubMed, arXiv, SSRN, publisher sites), with MCP server connectivity allowing access to authenticated institutional or subscription-based data sources.",
-      "limitations": "**Free tier limit** - Allow only 5 queries per day\n**No dedicated academic index by default** - Rely on the public web, uploaded files, connected apps, and MCP sources instead of a built-in scholarly database\n**Output quality dependence** - Depend on clear prompts and good source selection, and may perform worse in highly specialized domains\n**Hallucination risk** - Still hallucinate facts or make incorrect inferences\n**Slower and usage-limited** - Take more time for deep research tasks and remain subject to plan-based usage limits\n**No direct access in Hong Kong**",
+      "limitations": "**Free tier limit** - Allow only 5 queries per day\n**No dedicated scholarly index by default** - Relies on the public web, uploaded files, connected apps, and MCP sources rather than a built-in academic database.\n**Output quality dependence** - Depend on clear prompts and good source selection, and may perform worse in highly specialized domains\n**Hallucination risk** - Still hallucinate facts or make incorrect inferences\n**Slower and usage-limited** - Take more time for deep research tasks and remain subject to plan-based usage limits\n**No direct access in Hong Kong**",
       "screenshots": [],
       "ai_role": "Generative LLM handling iterative query formulation, ranking judgment, and extensive synthesis.",
       "ai_roles": [
@@ -1914,8 +1928,8 @@
       "about": "Developed by Anthropic, a highly capable general-purpose AI assistant featuring web search and an optional 'Research' mode for agentic deep research.",
       "unique": "**Research mode (agentic)** - Perform extensive iterative searching with high-volume tool use, comparable to specialized academic tools.\n**Extended thinking capability** - Offer deep reasoning for complex multi-step analysis in Opus models.\n**MCP orchestration** - Connect to and intelligently chain multiple academic MCP servers, enabling highly composable research workflows.\n**Claude Skills** - Trigger complex multi-tool research sequences through user-defined natural-language instructions without coding.\n**Claude Code / Claude Code Desktop** - Provide terminal-based agentic tools for complex multi-step programming and research workflows.\n**Constitutional AI training approach** - Emphasize privacy, truthfulness, and harm avoidance as core model properties.\n**Large context window** - Feature a 200K token context window across flagship models.",
       "similar": "ChatGPT\nGemini\nGrok",
-      "coverage": "General-purpose AI with web access. No direct academic database integration.",
-      "limitations": "**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.\n**No direct access in Hong Kong**",
+      "coverage": "General-purpose AI with web access. No dedicated scholarly index.",
+      "limitations": "**No dedicated scholarly index** - Relies on the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.\n**No direct access in Hong Kong**",
       "screenshots": [],
       "ai_role": "Generative LLM specializing in long-document analysis, research synthesis, and structured writing.",
       "ai_roles": [
@@ -1949,7 +1963,7 @@
       "unique": "**Exclusive real-time access to X platform data** - Provide access to the full live X (Twitter) data stream for social sentiment analysis, trend detection, and breaking news synthesis unavailable to competitors\n**Iterative multi-step research** - Generate sub-queries, fetch real-time pages, follow links, and cross-verify claims across multiple sources\n**Transparent reasoning trace** - Show source selection, evidence evaluation, and logical steps to enhance trust and verifiability\n**Credibility assessment module** - Filter unreliable information by cross-verifying source reliability based on user interactions and source authority\n**Large context window** - Support up to a 1M token context window in Grok 3+\n**Multimodal capabilities** - Include image generation, image analysis, and video generation\n**Multiple response modes** - Offer Fast, Expert, Heavy, and Auto modes that adapt to query complexity\n**Multi-agents (2026-03)** - Enable developers to coordinate specialized AI agents for task delegation and collaborative reasoning across complex workflows",
       "similar": "ChatGPT\nGemini\nPerplexity",
       "coverage": "Searches the general open web in real-time with unique privileged access to the full X (Twitter) live data stream, covering news, authoritative websites, academic resources where accessible, and trending X posts.",
-      "limitations": "**No dedicated academic paper index** - - Source from the open web including X posts, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Citation attribution** - Provide less clear source attribution than tools like Perplexity Pro and perform weaker on source-heavy academic research.\n**X (Twitter) data bias** - Carry bias risks due to training data from a platform associated with misinformation and extremist content.\n**Privacy concerns** - Raise concerns through default enrollment in X post training use and a history of GDPR violations.\n**Expert search limits** - Impose limits on Expert search queries per day or month.",
+      "limitations": "**No dedicated scholarly index** - Relies on the open web, including X posts, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Citation attribution** - Provide less clear source attribution than tools like Perplexity Pro and perform weaker on source-heavy academic research.\n**X (Twitter) data bias** - Carry bias risks due to training data from a platform associated with misinformation and extremist content.\n**Privacy concerns** - Raise concerns through default enrollment in X post training use and a history of GDPR violations.\n**Expert search limits** - Impose limits on Expert search queries per day or month.",
       "screenshots": [],
       "ai_role": "Generative LLM with real-time web and X/Twitter access for synthesis. Multi-agents can coordinate specialized agents for complex workflows.",
       "ai_roles": [
@@ -1972,7 +1986,7 @@
       "name": "Grok Expert Search",
       "cat": "webdeepresearch",
       "abbr": "GK-DS",
-      "similar": "OpenAI Deep Research\nGemini Deep Research",
+      "similar": "ChatGPT Deep Research\nGemini Deep Research",
       "screenshots": [],
       "needs": [
         "deep-research"
@@ -2045,7 +2059,7 @@
       "unique": "**Real-time web search with citations** - Ground every answer in live web content with inline source links.\n**Multi-model flexibility** - Let users choose from multiple LLMs within one platform.\n**Agentic and deep research modes** - Support iterative multi-step retrieval and long-form autonomous research reports.\n**Publishing and discovery tools** - Enable users to create AI-generated pages indexed within Perplexity search.\n**Focus modes** - Target searches across verticals such as academic, news, Reddit, and YouTube.\n**Comet browser** - Offer an AI-enhanced browser with native Perplexity integration.",
       "similar": "Gemini\nCopilot",
       "coverage": "Primarily operates over the open web via its proprietary PerplexityBot crawl index, with an “Academic Focus” mode specifically searching Semantic Scholar, PubMed, and arXiv. No access to paywalled content.",
-      "limitations": "**Limited free quota for Deep Research**\n**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
+      "limitations": "**Limited free quota for Deep Research**\n**No dedicated scholarly index** - Primarily relies on the open web; Academic Focus helps surface sources such as Semantic Scholar, PubMed, and arXiv, but it still lacks a built-in academic database with consistent metadata and coverage.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
       "screenshots": [],
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
       "ai_roles": [
@@ -2096,11 +2110,11 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "Developed by Microsoft, an AI-powered assistant ecosystem spanning three main contexts: Copilot.microsoft.com for standalone consumer/prosumer AI chat, Microsoft 365 Copilot for enterprise productivity grounded in organizational data, and Copilot in Bing for web search with AI-synthesized answers. ",
+      "about": "Developed by Microsoft, an AI-powered assistant ecosystem spanning three main contexts: Copilot.microsoft.com for standalone consumer/prosumer AI chat, Microsoft 365 Copilot for enterprise productivity grounded in organizational data, and Copilot in Bing for web search with AI-synthesized answers.",
       "unique": "**Microsoft Graph grounding** - Synthesize across all data a user has permission to access within the Microsoft 365 ecosystem.\n**Enterprise data protection** - Keep organizational data within the Microsoft 365 service boundary and do not use it to train LLMs.",
-      "similar": "ChatGPT\nGoogle Gemini\nPerplexity",
-      "coverage": "For consumer Copilot, real-time open web index plus uploaded user documents; for Microsoft 365 Copilot, all organizational data accessible plus open web search; no dedicated academic paper index.",
-      "limitations": "**Requires enterprise licensing** - Require an expensive Microsoft 365 Copilot add-on, limiting access to well-resourced organizations.\n**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
+      "similar": "ChatGPT\nGemini\nPerplexity",
+      "coverage": "For consumer Copilot, real-time open web index plus uploaded user documents; for Microsoft 365 Copilot, organizational data plus open web search. No dedicated scholarly index.",
+      "limitations": "**Requires enterprise licensing** - Require an expensive Microsoft 365 Copilot add-on, limiting access to well-resourced organizations.\n**No dedicated scholarly index** - Rely on the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
       "screenshots": [],
       "ai_role": "Generative LLM with Bing web search grounding for real-time answer synthesis with inline citations.",
       "ai_roles": [
@@ -2131,7 +2145,7 @@
       "badgeText": "",
       "via": "",
       "about": "Microsoft 365 Copilot's Researcher Agent — a multi-step research agent powered by OpenAI's models, combining web search with organizational data (e.g., emails, SharePoint, Salesforce) to produce structured, citation-rich research reports.",
-      "similar": "OpenAI Deep Research\nGemini Deep Research",
+      "similar": "ChatGPT Deep Research\nGemini Deep Research",
       "screenshots": [],
       "ai_role": "Agentic LLM conducting multi-step web search and synthesis to produce long-form research reports.",
       "ai_roles": [
@@ -2163,9 +2177,9 @@
       "via": "",
       "about": "Developed by Ex Libris/Clarivate, an AI-powered discovery tool integrated into Primo VE (HKUST’s PowerSearch) that enhances the library’s discovery experience with GenAI capabilities.",
       "unique": "**“Free” access for Primo users** - Include with existing Primo VE subscriptions at no additional cost\n**Extensive source coverage** - Search 5B+ records across journal articles, books, theses, etc.\n**Prefiltering** – allow filtering by content type and date range, or add refinements directly in query\n**Multilingual support** - Accept non-English queries and return answers in the same language",
-      "similar": "Web of Science Research Assistant (LLM converted Boolean query and search within Web of Science database)\nEBSCO Natural Language Search (LLM converted Boolean query and search within EBSCOhost database)",
+      "similar": "Web of Science Research Assistant (LLM converted Boolean query and search within Web of Science database)\nEBSCOhost NLS (LLM converted Boolean query and search within EBSCOhost database)",
       "coverage": "Searches 5B+ records from Ex Libris Central Discovery Index (CDI) – a shared library discovery index used by libraries worldwide, covering journal articles, conference proceedings, books, reports, theses, etc. across all disciplines, excluding content from Elsevier, JSTOR, and DataCite.",
-      "limitations": "**Query transparency** – Boolean query generated not immediately visible, require users to click “View more results” to see what it searches\n**LLM-generated query quality** - limit search effectiveness because the Boolean query generated by GPT-4.1-mini can be suboptimal for comprehensive searches\n**Reranking scope** – only rerank the top 30 initial search results from a 5 billion record CDI, potentially missing highly relevant papers\n**Summary quality** - reduce summary quality by relying only on the top 5 ranked results\n**Abstract-only RAG** - limit answer depth by generating responses only from abstracts of the 5 sources, even when full text is available in CDI\n**Follow-up conversation** - do not support follow-up questions\n**Content coverage gaps** - exclude news and content from major sources such as Elsevier, JSTOR, and DataCite\n**Content guardrails** - block legitimate academic queries on sensitive but valid scholarly topics",
+      "limitations": "**Query transparency** – Boolean query generated not immediately visible, require users to click “View more results” to see what it searches\n**LLM-generated query quality** - limit search effectiveness because the Boolean query generated by GPT-4.1-mini can be suboptimal for comprehensive searches\n**Reranking scope** – Only rerank the top 30 initial search results from a 5 billion record CDI, potentially missing highly relevant papers\n**Summary quality** - Reduce summary quality by relying only on the top 5 ranked results\n**Abstract-only RAG** - Limit answer depth by generating responses only from abstracts of the 5 sources, even when full text is available in CDI\n**Follow-up conversation** - Do not support follow-up questions\n**Content coverage gaps** - Exclude news and content from major sources such as Elsevier, JSTOR, and DataCite\n**Content guardrails** - Block legitimate academic queries on sensitive but valid scholarly topics",
       "screenshots": [],
       "ai_role": "Use LLM (currently GPT-4.1-mini) to generate a Boolean query, re-rank top 30 results using embeddings and select the top 5, and create a summary based on these 5 sources.",
       "ai_roles": [
@@ -2194,10 +2208,10 @@
       "badgeText": "Beta",
       "via": "",
       "about": "Developed by Springer Nature, an AI-powered research tool built for researchers, operating as a single-paper reading assistant combined with a manuscript adviser.",
-      "unique": "**Publisher-agnostic** – works with any paper from any publisher, not just SpringerNature content\n**Figures walkthrough** – provides detailed AI-generated descriptions of each figure in a paper, with an audio playback option for simultaneous listening and viewing\n**Related papers discovery** – surfaces key foundational papers, recent citing papers, reviews, and similar studies from across the literature\n**Manuscript Adviser module** – accepts uploaded draft manuscripts and provides feedback on style, structure, and substance, including suggested alternative titles and abstracts\n**Missing references detection** – identifies sections in an uploaded manuscript where a supporting reference may be missing",
+      "unique": "**Publisher-agnostic** – Work with any paper from any publisher, not just SpringerNature content\n**Figures walkthrough** – Provide detailed AI-generated descriptions of each figure in a paper, with an audio playback option for simultaneous listening and viewing\n**Related papers discovery** – Surface key foundational papers, recent citing papers, reviews, and similar studies from across the literature\n**Manuscript Adviser module** – Accept uploaded draft manuscripts and provide feedback on style, structure, and substance, including suggested alternative titles and abstracts\n**Missing references detection** – Identify sections in an uploaded manuscript where a supporting reference may be missing",
       "similar": "SciSpace (chat with PDF)\nElicit (paper reading and extraction)",
       "coverage": "Covers 23M papers from Springer Nature, Elsevier, and major open-access publishers from 2000 to 2025. It also works with any user-uploaded paper, and uses both uploaded content and its internal corpus to discover related papers.",
-      "limitations": "**No multi-paper synthesis** – cannot answer complex research questions requiring synthesis across many papers, only working on one paper at a time or surfacing related papers\n**Figures walkthrough limit** – only works with SpringerNature papers\n**LLM may generate incorrect or misleading information** – SpringerNature acknowledges this risk and urges checking against source material\n**Coverage gap for pre-2000 literature** – its corpus only spans from 2000 to 2025",
+      "limitations": "**No multi-paper synthesis** – Cannot answer complex research questions requiring synthesis across many papers, only working on one paper at a time or surfacing related papers\n**Figures walkthrough limit** – Only works with SpringerNature papers\n**LLM may generate incorrect or misleading information** – SpringerNature acknowledges this risk and urges checking against source material\n**Coverage gap for pre-2000 literature** – Its corpus only spans from 2000 to 2025.",
       "screenshots": [],
       "ai_role": "Fixed-button summarization for individual papers, and semantic search to help users explore related research.",
       "ai_roles": [

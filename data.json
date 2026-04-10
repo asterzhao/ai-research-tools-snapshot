@@ -547,8 +547,6 @@
         "role4c"
       ],
       "needs": [
-        "find-lit",
-        "ai-synthesis",
         "deep-research"
       ]
     },
@@ -961,9 +959,7 @@
       "url": "https://www.statista.com/business/connect-mcp",
       "via": "Claude",
       "about": "MCP integration for accessing Statista's statistics and market data within compatible AI assistants.",
-      "unique": "Brings quantitative market data directly into flexible AI chat environments",
       "similar": "Wiley Scholar MCP",
-      "limitations": "Requires compatible MCP client\nLimited to Statista content",
       "screenshots": [],
       "ai_role": "LLM orchestrates query formulation and synthesizes retrieved statistical data.",
       "ai_roles": [
@@ -1236,7 +1232,7 @@
       "about": "An AI-powered research platform that answers questions with citation-grounded responses from scholarly literature and classifies citations as supporting, contrasting, or mentioning.",
       "unique": "**Citation statements** - ground AI responses in article full text for easy verification\n**Smart Citations** - classify citations as supporting, contrasting, or mentioning, with full in-text snippets rather than simple counts\n**Pre-filtering** - choose models, set the number of publications reviewed, filter by year, publication type, journal, etc.\n**Search transparency** - show the full search strategy and all consulted sources\n**Output formats** - support both chat and table/literature matrix views\n**MCP server** (Feb 2026) - enable direct integration with Claude, ChatGPT, Copilot, and other MCP-compatible AI tool",
       "similar": "Consensus (literature search + summary)\nElicit (literature search + summary)\nSciSpace (literature search + summary)",
-      "coverage": "Covers 280 million+ papers, books, preprints, etc. across all disciplines and includes 1 billion+ Smart Citation statements extracted from full-text articles. Its content comes from both direct publisher indexing agreements and major open access sources.",
+      "coverage": "Covers 280M+ papers, books, preprints, etc. across all disciplines and includes 1B+ Smart Citation statements extracted from full-text articles. Its content comes from both direct publisher indexing agreements and major open access sources.",
       "limitations": "**Search** - rely on keyword-based Boolean search rather than semantic search\n**Model variability** - produce different, non-deterministic results across models\n**Summary scope** - draw summaries from the top 10–20 results (depending on settings and model choice), not all consulted sources\n**Citation faithfulness** - cite real sources, but generated claims still require verification\n**Pricing** - requires a paid subscription for full functionality",
       "screenshots": [
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/Scite_homepage.png",
@@ -1269,11 +1265,8 @@
       "viaLibrary": false,
       "url": "https://scite.ai/mcp",
       "via": "Claude, ChatGPT",
-      "about": "MCP integration for citation context analysis within Claude — showing how papers support, contrast, or mention findings.",
-      "unique": "Allows custom AI agents to perform automated fact-checking using Scite's citation classification",
+      "about": "Scite's MCP integration for citation context analysis within Claude — showing how papers support, contrast, or mention findings.",
       "similar": "PubMed MCP",
-      "coverage": "Scite's 1.2B+ citation statements from 35M+ full-text articles.",
-      "limitations": "Requires Claude with MCP\nLimited to Scite-indexed full-text",
       "screenshots": [],
       "ai_role": "LLM orchestrates retrieval of citation statements to validate claims dynamically.",
       "ai_roles": [
@@ -1339,8 +1332,6 @@
         "role4c"
       ],
       "needs": [
-        "find-lit",
-        "ai-synthesis",
         "deep-research"
       ]
     },
@@ -1401,8 +1392,7 @@
         "role4c"
       ],
       "needs": [
-        "deep-research",
-        "find-lit"
+        "deep-research"
       ]
     },
     {
@@ -1414,7 +1404,6 @@
       "free": true,
       "url": "https://consensus.app/home/mcp/",
       "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
-      "unique": "Combines the \"Consensus Meter\" methodology with long-form, multi-round report generation",
       "similar": "Scite MCP\nWiley Scholar Gateway MCP\nPubMed MCP",
       "screenshots": [],
       "ai_role": "Enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool",
@@ -1448,7 +1437,7 @@
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_agent_01.png",
         "https://d329ms1y997xa5.cloudfront.net/accounts/213351/images/SciSpace_agent_02.png"
       ],
-      "ai_role": "SciSpace Agents has an Agent Gallery that shows tasks like systematic reviews, citation mapping, and other analyses, along with each agent’s workflow. It behaved more like a flexible general-purpose LLM, reasoning through tasks, identifying relevant papers, and using tools to find related work and run analyses.",
+      "ai_role": "",
       "ai_roles": [
         "role2",
         "role3",
@@ -1471,10 +1460,7 @@
       "abbr": "SS-DR",
       "free": false,
       "about": "SciSpace's 'Deep Review' mode performing iterative deep search and AI analysis to produce comprehensive literature review reports.",
-      "unique": "Integrates seamlessly with SciSpace's robust reading and table extraction tools",
-      "similar": "Elicit Research Report\nConsensus Deep Research",
-      "coverage": "200M+ papers across all academic disciplines.",
-      "limitations": "Premium feature requiring subscription\nProcessing time for thorough reviews",
+      "similar": "Elicit Research Report\nConsensus Deep Search",
       "screenshots": [],
       "needs": [
         "deep-research"
@@ -1493,18 +1479,14 @@
       "badgeText": "",
       "via": "",
       "about": "SciSpace's agentic research framework enabling autonomous multi-step workflows — including paper discovery, reading, table extraction, and synthesis — within a single orchestrated session.",
-      "unique": "Combines SciSpace's full tool suite (search, PDF reader, table extractor) into an autonomous end-to-end research pipeline",
-      "similar": "PaperQA2\nAi2 Asta",
-      "coverage": "200M+ academic papers across all disciplines via SciSpace's index.",
-      "limitations": "Premium feature\nAgentic workflows may require user oversight for quality control",
+      "similar": "PaperQA2",
       "screenshots": [],
       "ai_role": "Agentic LLM orchestrates multiple tools (search, read, extract, compare) autonomously to complete complex research tasks.",
       "ai_roles": [
         "role5"
       ],
       "needs": [
-        "deep-research",
-        "find-lit"
+        "deep-research"
       ]
     },
     {
@@ -1550,7 +1532,6 @@
         "role4c"
       ],
       "needs": [
-        "ai-synthesis",
         "deep-research"
       ]
     },
@@ -1589,6 +1570,7 @@
       "policy_url": "https://www.undermind.ai/privacy",
       "needs": [
         "find-lit",
+        "ai-synthesis",
         "deep-research"
       ]
     },
@@ -1606,14 +1588,19 @@
       "badgeText": "",
       "via": "",
       "about": "Developed by FutureHouse, an open-source, agent-based academic search system that employs iterative search methods and leverages LLMs to evaluate relevance and generate comprehensive answers.",
-      "unique": "Offers multiple search types and specialist agents (Crow, Owl, Falcon) for transparent reviews",
-      "similar": "Ai2 Asta - Generate Report",
+      "unique": "**Open-source and API access** - Provide a fully open-source PaperQA2 library with API support, compatibility with various LLMs, and support for custom corpora.\n**Agentic workflow** - Use an agent LLM to manage tools, iteratively expand queries, search for papers, and gather evidence until a complete answer is formed\n**Multiple task modes** - Support question answering (Crow), precedent search (Owl), deep topic synthesis (Falcon), and chemistry-specific workflows (Phoenix).\n**Contextual summarization** - Summarize and rate retrieved text based on the query before the final prompt to improve relevance and accuracy\n**Citation traversal** - Find more relevant paper through citation chaining\n**Retraction and metadata checks** - Check for retracted papers and automatically pull metadata like citation counts and journal quality from Crossref and Semantic Scholar\n**Multimodal support** - Understand tables, figures, equations, and non-English scientific content\n**Local repository search** - Include built-in full-text search for personal PDF and text file collections",
+      "similar": "Undermind (iterative search)\nAi2 Asta - Find Papers",
       "coverage": "Covers ~38M papers on PubMed, 500k+ clinical trials, and open access papers from the Semantic Scholar/S2ORC corpus (which indexes 200M+ papers), with a primary disciplinary focus on biology and biomedical sciences.",
-      "limitations": "Self-hosted deployment requires technical setup\nQuality depends on paper accessibility and corpus coverage",
+      "limitations": "**Self-hosted deployment** - require technical setup to install and run\n**Open-access coverage bias** - focus mainly on PubMed and open-access papers, which can miss important paywalled literature\n**High compute cost** - use more API calls and time than standard RAG systems because of RCS and agent-based tool use",
       "screenshots": [],
-      "ai_role": "Retrieval and synthesis via generative LLM deep search.",
+      "ai_role": "Use an agent LLM to manage tools, iteratively expand queries, search for papers, and gather evidence until a complete answer is formed.",
       "ai_roles": [
-        "role4c"
+        "role1",
+        "role2",
+        "role3",
+        "role4a",
+        "role4c",
+        "role5"
       ],
       "privacy": "",
       "policy_url": "https://www.futurehouse.org/privacy-policy",
@@ -1781,7 +1768,7 @@
       "name": "Gemini Deep Research",
       "cat": "webdeepresearch",
       "abbr": "GE-DR",
-      "about": "Google’s autonomous AI research agent, part of the Gemini ecosystem, that conducts multi-step, iterative research across hundreds of web sources and synthesizes findings into comprehensive reports with structured sections and citations.",
+      "about": "Google’s autonomous AI research agent, part of the Gemini ecosystem, that conducts multi-step, iterative research across hundreds of web sources and synthesizes findings into comprehensive reports with structured sections and citations. Currently, the Enterprise version (including Deep Research) is available on trial for HKUST staff.",
       "unique": "**Autonomous multi-step iterative research** - Conduct a continuous plan-search-browse-synthesize-refine loop across hundreds of web sources, show live progress, and complete complex research in 5-15 minutes.\n**Interactive Research Plan** - Present a proposed research strategy before execution, allowing users to review, add, remove, or modify the plan.\n**Largest context window** - Utilize a 1M token context window to synthesize extremely large evidence sets in one pass.\n**Google Workspace integration** - Access Gmail, Drive, Docs, Sheets, Slides, PDFs, and Google Chat to incorporate personal or institutional knowledge with public web research.\n**PDF and image upload** - Allow users to upload proprietary documents and combine them with web-sourced evidence.",
       "similar": "OpenAI Deep Research\nPerplexity",
       "coverage": "Searches the open web via Google Search, focusing on publicly accessible web pages, news sites, blogs, open-access repositories, Wikipedia, and official institutional websites, with additional integration for user's Gmail, Drive, Docs, and Google Chat via Workspace.",
@@ -1868,12 +1855,12 @@
       "free": false,
       "url": "https://chat.openai.com/",
       "about": "An agentic research capability built into ChatGPT by OpenAI, that uses a specialized model to autonomously conduct multi-step research tasks on the open internet and produce comprehensive, cited research reports.",
-      "unique": "Highly capable reasoning for novel/complex tasks; effectively detects retraction notices via broad web synthesis",
+      "unique": "**Comprehensive multi-source research** - Search, analyze, and combine information from the web, uploaded files, connected apps, and MCP servers into a cited report\n**Source control and composability** - Let users choose trusted sources, uploaded documents, and connected tools while combining MCP-compatible sources for more flexible research workflows\n**Research-oriented reasoning and analysis** - Support multi-step research tasks, deeper analysis, and optional Code Interpreter in API workflows",
       "similar": "Gemini Deep Research\nPerplexity",
       "coverage": "Searches the open web in real-time, including academic repositories (PubMed, arXiv, SSRN, publisher sites), with MCP server connectivity allowing access to authenticated institutional or subscription-based data sources.",
-      "limitations": "Requires ChatGPT Pro ($200/month)\nNot directly accessible in Hong Kong\nSources from open web",
+      "limitations": "**Free tier limit** - Allow only 5 queries per day\n**No dedicated academic index by default** - Rely on the public web, uploaded files, connected apps, and MCP sources instead of a built-in scholarly database\n**Output quality dependence** - Depend on clear prompts and good source selection, and may perform worse in highly specialized domains\n**Hallucination risk** - Still hallucinate facts or make incorrect inferences\n**Slower and usage-limited** - Take more time for deep research tasks and remain subject to plan-based usage limits\n**No direct access in Hong Kong**",
       "screenshots": [],
-      "ai_role": "Purely generative LLM handling iterative query formulation, ranking judgment, and extensive synthesis.",
+      "ai_role": "Generative LLM handling iterative query formulation, ranking judgment, and extensive synthesis.",
       "ai_roles": [
         "role1",
         "role2",
@@ -2057,7 +2044,7 @@
       "about": "Developed by Perplexity AI, Inc., an AI-powered answer engine that combines real-time web search with LLMs to generate concise, conversational answers with inline citations to web sources.",
       "unique": "**Real-time web search with citations** - Ground every answer in live web content with inline source links.\n**Multi-model flexibility** - Let users choose from multiple LLMs within one platform.\n**Agentic and deep research modes** - Support iterative multi-step retrieval and long-form autonomous research reports.\n**Publishing and discovery tools** - Enable users to create AI-generated pages indexed within Perplexity search.\n**Focus modes** - Target searches across verticals such as academic, news, Reddit, and YouTube.\n**Comet browser** - Offer an AI-enhanced browser with native Perplexity integration.",
       "similar": "Gemini\nCopilot",
-      "coverage": "Open web — not limited to academic databases. Cites web pages, news, and some academic sources.",
+      "coverage": "Primarily operates over the open web via its proprietary PerplexityBot crawl index, with an “Academic Focus” mode specifically searching Semantic Scholar, PubMed, and arXiv. No access to paywalled content.",
       "limitations": "**Limited free quota for Deep Research**\n**No dedicated academic paper index** - Source from the open web, which may lack the coverage, authority, and metadata quality of specialized academic databases.\n**Quality of output depends on prompt quality** - Perform less effectively in narrow specialist research domains.\n**Hallucination risk** - Generate inaccurate or fabricated outputs in some cases.",
       "screenshots": [],
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
@@ -2082,10 +2069,7 @@
       "abbr": "PX-DR",
       "free": false,
       "about": "Perplexity's Deep Research mode performing multi-step web search and synthesis to produce detailed, cited long-form research reports.",
-      "unique": "Excels at broad questions synthesizing news, general web, and academic literature simultaneously",
-      "similar": "ChatGPT Deep Research\nGemini Deep Research",
-      "coverage": "Primarily operates over the open web via its proprietary PerplexityBot crawl index, with an “Academic Focus” mode specifically searching Semantic Scholar, PubMed, and arXiv. No access to paywalled content.",
-      "limitations": "Limited quota for Deep Research\nSources from open web, not curated academic databases",
+      "similar": "ChatGPT Deep Research\nGemini Deep Research\nGrok Expert Search",
       "screenshots": [],
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
       "ai_roles": [
@@ -2147,10 +2131,7 @@
       "badgeText": "",
       "via": "",
       "about": "Microsoft 365 Copilot's Researcher Agent — a multi-step research agent powered by OpenAI's models, combining web search with organizational data (e.g., emails, SharePoint, Salesforce) to produce structured, citation-rich research reports.",
-      "unique": "Deep integration with Microsoft 365 suite; can leverage enterprise data alongside web sources",
       "similar": "OpenAI Deep Research\nGemini Deep Research",
-      "coverage": "Open web via Bing, plus optionally connected Microsoft 365 organizational data.",
-      "limitations": "Requires Microsoft 365 Copilot license\nSources primarily from open web\nNot yet widely available",
       "screenshots": [],
       "ai_role": "Agentic LLM conducting multi-step web search and synthesis to produce long-form research reports.",
       "ai_roles": [

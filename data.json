@@ -480,36 +480,19 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "Elsevier's largest abstract and citation database of peer-reviewed literature.",
+      "about": "Elsevier's largest abstract and citation database of peer-reviewed literature, now integrated with an AI query builder.",
       "unique": "",
       "similar": "Web of Science\nEBSCOhost",
       "coverage": "Covers 29k+ peer-reviewed journals, conference proceedings, and book series across sciences, social sciences, arts, and humanities.",
       "limitations": "",
       "screenshots": [],
-      "ai_role": "",
+      "ai_role": "Use AI to formulate and refine Boolean queries from natural language input; no generative summary produced.",
       "ai_roles": [
-        "role0"
+        "role0",
+        "role1"
       ],
       "privacy": "“Our enterprise agreements with AWS, Microsoft Azure, OpenAI, and Anthropic include zero-retention contracts, so your prompts and documents are never used for large language model development. Elsevier also does not use customer data in our private cloud environments for this purpose.”",
       "policy_url": "https://www.elsevier.com/about/responsible-ai",
-      "needs": [
-        "find-lit"
-      ]
-    },
-    {
-      "id": "scopus-ai-query",
-      "contentRef": "scopus",
-      "name": "Scopus - AI Query Builder",
-      "cat": "quicksearch",
-      "abbr": "SC-AQ",
-      "free": false,
-      "hkust": true,
-      "viaLibrary": true,
-      "url": "https://lbdiscover.hkust.edu.hk/bib/991000319279703412",
-      "ai_role": "Use AI to formulate and refine Boolean queries from natural language input; no generative summary produced.",
-      "ai_roles": [
-        "role1"
-      ],
       "needs": [
         "find-lit"
       ]
@@ -528,7 +511,7 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "Developed by Elsevier, an AI research tool that combines the Scopus bibliographic database with LLM to help researchers quickly discover, summarize, and navigate scholarly literature.\nStarting Apr 2026, Scopus AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
+      "about": "Developed by Elsevier, an AI research tool that combines the Scopus bibliographic database with LLM to help researchers quickly discover, summarize, and navigate scholarly literature.\n\nNote: Starting Apr 2026, Scopus AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
       "unique": "**Transparency** - displays query optimization steps and the generated Boolean query.\n**RAG Fusion technology** - combines hybrid search (LLM-generated Boolean + parallel vector search) with Reciprocal Rank Fusion to rerank results, improving recall and precision\n**Topic Summary and Expanded Summary** - produces structured summaries with references and confidence-in-relevance indicators\n**Foundational documents** - mines the full Scopus database to surface high-impact papers cited by papers used in summaries\n**Concept Map** - generates interactive visual maps from keywords in abstracts to show topic relationships.\n**Deep Research** - agentic AI feature that develops a detailed research plan, iteratively searches Scopus, and produces comprehensive downloadable reports",
       "similar": "ScienceDirect AI (Elsevier product with full-text access but narrower corpus)\nLeapSpace (successor of ScienceDirect AI and Scopus AI)\nPrimo Research Assistant (hybrid search + multi-document RAG for library discovery)\nWeb of Science Research Assistant (RAG over a curated citation database)",
       "limitations": "**Additional cost** – requires an additional cost beyond the base Scopus subscription\n**Abstract-only access** – works only from titles and abstracts\n**Limited transparency in final ranking** – while the Boolean query is shown, the final result order from RAG Fusion/vector reranking is harder to interpret or reproduce\n**Hallucination risk in RAG summaries** – susceptible to subtle misrepresentation of evidence despite strong guardrails\n**Retraction/correction awareness** – depends on Scopus metadata being updated; may not always flag retracted papers in generated summaries",
@@ -554,15 +537,14 @@
       "url": "https://lbdiscover.hkust.edu.hk/bib/991000319279703412",
       "badge": "",
       "badgeText": "",
-      "about": "Developed by Elsevier, an AI research tool that combines the Scopus bibliographic database with LLM to help researchers quickly discover, summarize, and navigate scholarly literature. The Deep Research feature leverages agentic AI for complex workflows. It creates a detailed research plan, searches Scopus’ curated literature, refines its strategy as new insights emerge, and delivers synthesized findings in a in-depth, downloadable report.",
+      "about": "Developed by Elsevier, an AI research tool that combines the Scopus bibliographic database with LLM to help researchers quickly discover, summarize, and navigate scholarly literature. The Deep Research feature leverages agentic AI for complex workflows. It creates a detailed research plan, searches Scopus’ curated literature, refines its strategy as new insights emerge, and delivers synthesized findings in a in-depth, downloadable report. \n\nNote: Starting Apr 2026, Scopus AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
       "screenshots": [],
       "ai_role": "Generative LLM performs iterative query expansion and synthesis, grounded in Scopus's curated scholarly index.",
       "ai_roles": [
         "role1",
         "role2",
         "role3",
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -583,7 +565,7 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "Developed by Elsevier, a AI research tool built on ScienceDirect (the world's largest platform of peer-reviewed full-text research) that enables researchers to search, summarise, and compare insights from its content. \nStarting Apr 2026, ScienceDirect AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
+      "about": "Developed by Elsevier, a AI research tool built on ScienceDirect (the world's largest platform of peer-reviewed full-text research) that enables researchers to search, summarise, and compare insights from its content. \n\nNote: Starting Apr 2026, Scopus AI has been migrated to LeapSpace, which unifies the capabilities of Scopus AI and ScienceDirect AI into a single workspace.",
       "unique": "**Full-text grounding** - Provide deep, passage-level access to full-text Elsevier content and link every AI-generated claim to a specific source passage.\n**Hybrid search** - Combine semantic search and keyword search.\n**Ask ScienceDirect AI** - Offer a standalone chatbot that generates article summaries with citations.\n**Reading Assistant** - Enable conversational exploration of a single article or book chapter, with every response citing specific source passages.\n**Compare Experiments** - Present a structured table that break down experiments across retrieved articles for side-by-side comparison (e.g. purpose, methods, conclusions).",
       "similar": "LeapSpace (successor of ScienceDirect AI and Scopus AI)",
       "coverage": "Indexes 14-18 million full-text peer-reviewed journal articles and book chapters from ScienceDirect, with optional Scopus abstract integration extending coverage to 100M+ records from 7,000+ publishers. It focuses primarily on STEM, health sciences, and social sciences.",
@@ -1342,7 +1324,7 @@
     {
       "id": "elicit-sr",
       "contentRef": "elicit-find",
-      "name": "Elicit - Research Report",
+      "name": "Elicit - Systematic Review",
       "cat": "deepresearch",
       "abbr": "EL-SR",
       "free": false,
@@ -1352,8 +1334,7 @@
         "role2",
         "role3",
         "role4b",
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "needs": [
         "find-lit",
@@ -1391,8 +1372,7 @@
         "role3",
         "role4a",
         "role4b",
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "privacy": "No AI training on user data or user chats. \n“Consensus does not use your personal or non-personal information to train large language models. Furthermore, we do not send any user data to third parties for the purpose of training large language models.”",
       "policy_url": "https://consensus.app/home/privacy-policy/",
@@ -1404,26 +1384,43 @@
     {
       "id": "consensus-deep",
       "contentRef": "consensus",
-      "name": "Consensus - Deep Research",
+      "name": "Consensus - Deep Search",
       "cat": "deepresearch",
       "abbr": "CS-DR",
       "free": false,
       "url": "https://consensus.app",
-      "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
-      "unique": "Combines the \"Consensus Meter\" methodology with long-form, multi-round report generation",
       "similar": "Elicit Research Report\nAi2 Asta",
       "coverage": "200M+ multidisciplinary academic papers via Semantic Scholar.",
-      "limitations": "On trial at HKUST until August 2026\nSignificant processing time\nRequires Pro subscription",
       "screenshots": [],
       "ai_role": "Generative LLM handles iterative query formulation, ranking judgment, and extensive synthesis.",
       "ai_roles": [
         "role4a",
         "role4b",
-        "role4c",
+        "role4c"
+      ],
+      "needs": [
+        "deep-research",
+        "find-lit"
+      ]
+    },
+    {
+      "id": "consensus-mcp",
+      "contentRef": "consensus",
+      "name": "Consensus - MCP",
+      "cat": "deepresearch",
+      "abbr": "CS-MCP",
+      "free": true,
+      "url": "https://consensus.app/home/mcp/",
+      "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
+      "unique": "Combines the \"Consensus Meter\" methodology with long-form, multi-round report generation",
+      "similar": "Scite MCP\nWiley Scholar Gateway MCP\nPubMed MCP",
+      "screenshots": [],
+      "ai_role": "Enable direct integration with Claude, ChatGPT, and other MCP-compatible AI tool",
+      "ai_roles": [
         "role5"
       ],
       "needs": [
-        "deep-research"
+        "find-lit"
       ]
     },
     {
@@ -1477,11 +1474,6 @@
       "coverage": "200M+ papers across all academic disciplines.",
       "limitations": "Premium feature requiring subscription\nProcessing time for thorough reviews",
       "screenshots": [],
-      "ai_role": "Generative LLM performs iterative sub-query generation and synthesis.",
-      "ai_roles": [
-        "role4c",
-        "role5"
-      ],
       "needs": [
         "deep-research"
       ]
@@ -1553,8 +1545,7 @@
       "cat": "deepresearch",
       "abbr": "AS-QA",
       "ai_roles": [
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "needs": [
         "ai-synthesis",
@@ -1590,8 +1581,7 @@
       "ai_roles": [
         "role2",
         "role3",
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "privacy": "Non-Personal Information may be used for service improvement. No explicit opt-out for AI training.",
       "policy_url": "https://www.undermind.ai/privacy",
@@ -1621,8 +1611,7 @@
       "screenshots": [],
       "ai_role": "Retrieval and synthesis via generative LLM deep search.",
       "ai_roles": [
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "privacy": "",
       "policy_url": "https://www.futurehouse.org/privacy-policy",
@@ -1753,7 +1742,7 @@
     },
     {
       "id": "gemini",
-      "name": "Gemini (Enterprise)",
+      "name": "Gemini",
       "cat": "genai",
       "abbr": "GE",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
@@ -1764,15 +1753,18 @@
       "badge": "trial",
       "badgeText": "Trial",
       "via": "",
-      "about": "Google's enterprise AI assistant for HKUST staff with advanced reasoning, multimodal capabilities, and Workspace integration.",
+      "about": "A multimodal AI platform designed to enhance productivity through advanced reasoning and data analysis. Currently Enterprise version is on trial for HKUST staff.",
       "unique": "Deep integration with Google Workspace (Docs, Drive, Gmail) for productivity workflows",
-      "similar": "MS Copilot\nChatGPT",
+      "similar": "ChatGPT\nClaude",
       "coverage": "General-purpose AI with web access. No direct academic database integration.",
-      "limitations": "Staff only (on trial)\nUser conversations may be reviewed by Google for quality improvement\nNo direct academic database access",
+      "limitations": "Staff only (on trial)\nNo direct academic database access",
       "screenshots": [],
-      "ai_role": "Generative LLM with web browsing capabilities for general synthesis.",
+      "ai_role": "LLM with web browsing capabilities for general synthesis. Allow integration with MCP-compatible AI tools.",
       "ai_roles": [
-        "role4c"
+        "role1",
+        "role2",
+        "role4c",
+        "role5"
       ],
       "privacy": "",
       "policy_url": "https://support.google.com/gemini/answer/13594961",
@@ -1794,8 +1786,7 @@
       "screenshots": [],
       "ai_role": "Generative LLM performing iterative sub-query generation and synthesis.",
       "ai_roles": [
-        "role4c",
-        "role5"
+        "role4c"
       ],
       "needs": [
         "deep-research"
@@ -1950,17 +1941,22 @@
       "badge": "",
       "badgeText": "",
       "via": "",
-      "about": "xAI's large language model integrated with X (Twitter) data for real-time web and social media synthesis.",
-      "unique": "Real-time access to X/Twitter posts alongside general web content",
-      "similar": "ChatGPT\nPerplexity",
-      "coverage": "Open web plus X/Twitter posts in real-time.",
-      "limitations": "No direct academic database access\nMay train on user data by default",
+      "about": "Developed by xAI, a conversational LLM integrated with X (Twitter) for real-time social media synthesis that features an Expert Search capability to perform iterative multi-step web searches, reconcile conflicting data, and generate comprehensive cited reports.",
+      "unique": "**Exclusive real-time access to X platform data** - Provide access to the full live X (Twitter) data stream for social sentiment analysis, trend detection, and breaking news synthesis unavailable to competitors\n**Iterative multi-step research** - Generate sub-queries, fetch real-time pages, follow links, and cross-verify claims across multiple sources\n**Transparent reasoning trace** - Show source selection, evidence evaluation, and logical steps to enhance trust and verifiability\n**Credibility assessment module** - Filter unreliable information by cross-verifying source reliability based on user interactions and source authority\n**Large context window** - Support up to a 1 million token context window in Grok 3+\n**Multimodal capabilities** - Include image generation, image analysis, and video generation\n**Multiple response modes** - Offer Fast, Expert, Heavy, and Auto modes that adapt to query complexity\n**Multi-agents (2026-03)** - Enable developers to coordinate specialized AI agents for task delegation and collaborative reasoning across complex workflows",
+      "similar": "ChatGPT\nGemini\nPerplexity",
+      "coverage": "Searches the general open web in real-time with unique privileged access to the full X (Twitter) live data stream, covering news, authoritative websites, academic resources where accessible, and trending X posts.",
+      "limitations": "**No access to academic sources** - Rely on public web crawling and miss most subscription-only academic content.\n**Citation attribution** - Provide less clear source attribution than tools like Perplexity Pro and perform weaker on source-heavy academic research.\n**X (Twitter) data bias** - Carry bias risks due to training data from a platform associated with misinformation and extremist content.\n**Privacy concerns** - Raise concerns through default enrollment in X post training use and a history of GDPR violations.\n**Expert search limits** - Impose limits on Expert search queries per day or month.",
       "screenshots": [],
-      "ai_role": "Generative LLM with real-time web and X/Twitter access for synthesis.",
+      "ai_role": "Generative LLM with real-time web and X/Twitter access for synthesis. Multi-agents can coordinate specialized agents for complex workflows.",
       "ai_roles": [
-        "role4c"
+        "role1",
+        "role2",
+        "role3",
+        "role4a",
+        "role4c",
+        "role5"
       ],
-      "privacy": "",
+      "privacy": "Grok may use your personal information to operate and improve the service, conduct research and model training, and analyze business and usage trends.",
       "policy_url": "https://x.ai/legal/privacy-policy",
       "needs": [
         "ai-synthesis"
@@ -1969,20 +1965,11 @@
     {
       "id": "grok-ds",
       "contentRef": "grok",
-      "name": "Grok Deep Search",
+      "name": "Grok Expert Search",
       "cat": "webdeepresearch",
       "abbr": "GK-DS",
-      "about": "Developed by xAI, a conversational GenAI, with a Deep Search feature that performs iterative multi-step web searches, synthesizes conflicting information, and produces comprehensive cited reports.",
-      "unique": "Part of the emerging wave of general web Deep Research tools, integrating real-time social media",
       "similar": "OpenAI Deep Research\nGemini Deep Research",
-      "coverage": "Searches the general open web in real-time with unique privileged access to the full X (Twitter) live data stream, covering news, authoritative websites, academic resources where accessible, and trending X posts.",
-      "limitations": "Sources include tweets and web — not curated academic databases\nFree access may change",
       "screenshots": [],
-      "ai_role": "Generative LLM synthesis producing report-style outputs.",
-      "ai_roles": [
-        "role5",
-        "role4c"
-      ],
       "needs": [
         "deep-research"
       ]
@@ -2084,7 +2071,6 @@
       "screenshots": [],
       "ai_role": "Generative LLM handles query formulation, retrieves web pages, and synthesizes answers with citations.",
       "ai_roles": [
-        "role5",
         "role4c"
       ],
       "needs": [

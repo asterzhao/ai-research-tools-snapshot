@@ -1,0 +1,7 @@
+#!/bin/sh
+# Stamps index.html with the current month/year before each commit.
+set -e
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT" || exit 1
+"$ROOT/scripts/bump-last-updated.sh"
+git add index.html

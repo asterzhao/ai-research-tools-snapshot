@@ -1279,7 +1279,7 @@
       "hkust": false,
       "viaLibrary": false,
       "url": "https://scite.ai/mcp",
-      "via": "Claude, ChatGPT",
+      "via": "Claude, ChatGPT, Cursor",
       "about": "Scite's MCP integration for citation context analysis within Claude — showing how papers support, contrast, or mention findings.",
       "similar": "PubMed MCP",
       "screenshots": [],
@@ -1351,6 +1351,26 @@
       ]
     },
     {
+      "id": "elicit-mcp",
+      "contentRef": "elicit-find",
+      "name": "Elicit - MCP",
+      "cat": "mcp",
+      "abbr": "EL-MCP",
+      "free": false,
+      "url": "https://docs.elicit.com/#description/mcp-server",
+      "similar": "Scite MCP\nWiley Scholar Gateway MCP\nPubMed MCP\nConsensus MCP",
+      "limitations": "**API/MCP for Pro users only** - 100 papers per search and 100 search per day. (2026-03)",
+      "about": "Elicit API provides programmatic access to Elicit's research capabilities. All API functionality is also available via MCP server for accessing Elicit's literature search capabilities within compatible LLMs.",
+      "screenshots": [],
+      "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
+      "ai_roles": [
+        "role5"
+      ],
+      "needs": [
+        "find-lit"
+      ]
+    },
+    {
       "id": "consensus",
       "name": "Consensus",
       "cat": "ainative",
@@ -1397,6 +1417,7 @@
       "abbr": "CS-DR",
       "free": false,
       "url": "https://consensus.app",
+      "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
       "similar": "Elicit Research Report\nAi2 Asta",
       "coverage": "200M+ multidisciplinary academic papers via Semantic Scholar.",
       "screenshots": [],
@@ -1418,8 +1439,9 @@
       "abbr": "CS-MCP",
       "free": true,
       "url": "https://consensus.app/home/mcp/",
-      "about": "Advanced Deep Research mode of Consensus conducting thorough, iterative multi-round searches and generating comprehensive research reports.",
       "similar": "Scite MCP\nWiley Scholar Gateway MCP\nPubMed MCP",
+      "limitations": "**Free tier limit for MCP** - 20 papers per search and 1,000 search per month. (2026-03)",
+      "about": "MCP integration for accessing Consensus's literature search capabilities within compatible LLMs.",
       "screenshots": [],
       "ai_role": "Act as a content access layer; the connecting LLM handles query formulation and synthesis.",
       "ai_roles": [

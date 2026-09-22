@@ -180,6 +180,7 @@ function isToolVisible(t) {
   if (!showTraditional && TRADITIONAL_CATS.has(t.cat)) return false;
   if (currentFilter === 'free' && !t.free) return false;
   if (currentFilter === 'hkust' && !t.hkust) return false;
+  if (currentFilter === 'mcp' && !t.mcp) return false;
   if (currentNeed !== 'all') {
     const n = t.needs || [];
     if (!n.includes(currentNeed)) return false;
@@ -978,6 +979,7 @@ function bootstrap(data) {
     privacy: strField(t.privacy),
     policy_url: strField(t.policy_url),
     ai_roles: t.ai_roles || [],
+    mcp: !!t.mcp,
   }));
 
   selectedTools = new Set(

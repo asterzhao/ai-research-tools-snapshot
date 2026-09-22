@@ -29,6 +29,11 @@
       "id": "news-biz",
       "label": "News & Business",
       "color": "#202938"
+    },
+    {
+      "id": "offer-mcp",
+      "label": "Offer MCP",
+      "color": "#202938"
     }
   ],
   "catMeta": {
@@ -523,7 +528,8 @@
       "policy_url": "https://clarivate.com/privacy-center/notices-policies/privacy-policy/",
       "needs": [
         "find-lit",
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -696,7 +702,8 @@
       "privacy": "",
       "policy_url": "https://legal.ebsco.com/privacy-policy",
       "needs": [
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -760,7 +767,8 @@
       "policy_url": "https://legal.ebsco.com/privacy-policy",
       "needs": [
         "find-lit",
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -903,7 +911,8 @@
       "privacy": "",
       "policy_url": "https://www.oreilly.com/privacy.html",
       "needs": [
-        "technical"
+        "technical",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -934,7 +943,8 @@
       ],
       "needs": [
         "technical",
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -957,7 +967,8 @@
         "role5"
       ],
       "needs": [
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1167,7 +1178,8 @@
       "privacy": "",
       "policy_url": "https://www.statista.com/imprint/#privacy",
       "needs": [
-        "stats-data"
+        "stats-data",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1197,7 +1209,8 @@
       "privacy": "",
       "policy_url": "https://www.statista.com/imprint/#privacy",
       "needs": [
-        "stats-data"
+        "stats-data",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1219,7 +1232,8 @@
         "role5"
       ],
       "needs": [
-        "stats-data"
+        "stats-data",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1414,7 +1428,8 @@
       "policy_url": "https://www.nlm.nih.gov/web_policies.html",
       "needs": [
         "find-lit",
-        "technical"
+        "technical",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1442,7 +1457,8 @@
       ],
       "needs": [
         "find-lit",
-        "technical"
+        "technical",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1468,7 +1484,8 @@
       ],
       "needs": [
         "find-lit",
-        "technical"
+        "technical",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1508,7 +1525,8 @@
       "policy_url": "https://scite.ai/privacy",
       "needs": [
         "ai-synthesis",
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1531,7 +1549,8 @@
       ],
       "needs": [
         "ai-synthesis",
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true,
       "unique": "**Unified scholarly and IP search** (2026-05) – Search papers together with 90M+ patent families and 200M+ applications, or run patent-only queries.\n**Expanded MCP sources** (2026-04) – Cover published literature, patents, ClinicalTrials.gov, and grants in one connection.",
@@ -1573,7 +1592,8 @@
       "policy_url": "https://elicit.com/operations/privacy",
       "needs": [
         "find-lit",
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1615,7 +1635,8 @@
         "role5"
       ],
       "needs": [
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true,
       "via": "Claude, ChatGPT",
@@ -1657,7 +1678,8 @@
       "policy_url": "https://consensus.app/home/privacy-policy/",
       "needs": [
         "ai-synthesis",
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1700,7 +1722,8 @@
         "role5"
       ],
       "needs": [
-        "find-lit"
+        "find-lit",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1776,7 +1799,8 @@
         "role5"
       ],
       "needs": [
-        "deep-research"
+        "deep-research",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1862,7 +1886,8 @@
       "needs": [
         "find-lit",
         "ai-synthesis",
-        "deep-research"
+        "deep-research",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1889,7 +1914,8 @@
       ],
       "needs": [
         "find-lit",
-        "deep-research"
+        "deep-research",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -1954,7 +1980,8 @@
       "policy_url": "https://www.wiley.com/en-us/privacy",
       "needs": [
         "find-lit",
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -2099,7 +2126,8 @@
         "role5"
       ],
       "needs": [
-        "deep-research"
+        "deep-research",
+        "offer-mcp"
       ],
       "mcp": true
     },
@@ -2161,7 +2189,8 @@
       "privacy": "See Notion’s AI security practices and privacy policy. Workspace content is processed to generate answers; review institutional terms before enabling connectors.",
       "policy_url": "https://www.notion.com/trust/privacy-policy",
       "needs": [
-        "ai-synthesis"
+        "ai-synthesis",
+        "offer-mcp"
       ],
       "mcp": true
     },
